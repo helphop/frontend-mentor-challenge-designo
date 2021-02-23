@@ -1,54 +1,43 @@
-// --------------------------------
-
-// (START) Global editor code https://codyhouse.co/ds/globals/forms
-
-// --------------------------------
-
 :root {
-  --form-control-padding-y: var(--space-xxs); // padding top/bottom
-  --form-control-padding-x: var(--space-xs); // padding left/right
-  --form-control-radius: 0.25em; // border radius
-  --form-control-font-size: 1em; // font size
+  --form-control-font-size: 1em;
+  --form-control-padding-x: var(--space-xs);
+  --form-control-padding-y: var(--space-xxs);
+  --form-control-radius: 0em;
 }
 
-.form-control { // basic form element style
+.form-control {
+  color: var(--color-white);
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-white);
+  font-family: var(--font-primary);
   line-height: 1.2;
-  background-color: var(--color-bg);
-  border: 2px solid var(--color-contrast-low);
-  transition: .2s;
+  @include fontSmooth;
+  transition: all 0.2s ease;
 
   &::placeholder {
     opacity: 1;
-    color: var(--color-contrast-medium);
+    color: var(--color-contrast-low);
   }
 
   &:focus {
+    box-shadow: 0px 0px 0px 2px alpha(var(--color-primary), 0.2);
     outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 2px alpha(var(--color-primary), 0.2);
   }
 }
 
-.form-control--error,
-.form-control[aria-invalid="true"] {
-  border-color: var(--color-error);
-
-  &:focus {
-    box-shadow: 0 0 0 2px alpha(var(--color-error), 0.2);
-  }
-}
-
-.form-control--disabled,
-.form-control[disabled], 
-.form-control[readonly] {
+.form-control--disabled, .form-control[disabled], .form-control[readonly] {
   cursor: not-allowed;
 }
 
-.form-legend {}
-.form-label {}
+.form-control[aria-invalid="true"], .form-control--error {
+  border-bottom: 2px solid var(--color-white);
+  outline: none;
+}
 
-// --------------------------------
+.form-legend {
+  font-size: var(--text-md);
+}
 
-// (END) Global editor code
-
-// --------------------------------
+.form-label {
+  font-size: var(--text-sm);
+}

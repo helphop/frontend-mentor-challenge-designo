@@ -1,4 +1,3 @@
-
 :root, [data-theme="default"] {
   // main
   @include defineColorHSL(--color-primary-darker, 11, 73%, 46%);
@@ -7,12 +6,17 @@
   @include defineColorHSL(--color-primary-light, 11, 100%, 80%);
   @include defineColorHSL(--color-primary-lighter, 11, 73%, 86%);
 
+  @include defineColorHSL(--color-accent-darker, 349, 75%, 36%);
+  @include defineColorHSL(--color-accent-dark, 349, 75%, 44%);
+  @include defineColorHSL(--color-accent, 349, 75%, 51%);
+  @include defineColorHSL(--color-accent-light, 349, 75%, 59%);
+  @include defineColorHSL(--color-accent-lighter, 349, 75%, 67%);
+
   @include defineColorHSL(--color-black, 270, 3%, 11%);
   @include defineColorHSL(--color-black-light, 264, 5%, 20%);
   @include defineColorHSL(--color-white, 0, 0%, 100%);
   @include defineColorHSL(--color-white-dark, 210, 17%, 95%);
 
-  // feedback
   @include defineColorHSL(--color-success-darker, 94, 48%, 42%);
   @include defineColorHSL(--color-success-dark, 94, 48%, 48%);
   @include defineColorHSL(--color-success, 94, 48%, 56%);
@@ -34,8 +38,15 @@
   @include defineColorHSL(--color-contrast-higher, 240, 8%, 12%);
 }
 
-// --------------------------------
+@supports(--css: variables) {
+  [data-theme="dark"] {
 
-// (END) Global editor code
-
-// --------------------------------
+    // color contrasts
+    @include defineColorHSL(--color-bg, 11, 72%, 66%);
+    @include defineColorHSL(--color-contrast-lower, 11, 73%, 68%);
+    @include defineColorHSL(--color-contrast-low, 0, 0%, 100%);
+    @include defineColorHSL(--color-contrast-medium, 12, 82%, 80%);
+    @include defineColorHSL(--color-contrast-high, 0, 0%, 100%);
+    @include defineColorHSL(--color-contrast-higher, 0, 0%, 100%);
+  }
+}

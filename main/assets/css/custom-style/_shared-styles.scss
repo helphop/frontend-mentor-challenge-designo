@@ -3,6 +3,12 @@
   --radius: 0.9375em; // border radius base size
 }
 
+a, .link {
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+
 body > * {
   background-color: var(--color-white);
   max-width: var(--max-width-xl); //1440px

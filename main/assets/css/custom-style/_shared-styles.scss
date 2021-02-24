@@ -2,3 +2,8 @@
   // radius
   --radius: 0.9375em; // border radius base size
 }
+
+body > * {
+  background-color: var(--color-white);
+  max-width: var(--max-width-xl); //1440px
+}

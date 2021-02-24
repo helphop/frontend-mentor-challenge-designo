@@ -9,68 +9,60 @@
   <title>Frontend Mentor | Designo Agency Website Challenge</title>
 </head>
 <body>
-  <div class="content-wrapper">
+  <div class="container container--outer">
     <header class="header">
-      <nav class="nav">
-        <div class="container">
-          <img class="nav__logo" src="./assets/images/shared/desktop/logo-dark.png" alt="designo logo">
-          <ul class="nav__list">
-            <li><a href="about.html">Our Company</a></li>
-            <li><a href="locations.html">Locations</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
+      <nav class="nav container">
+        <img class="nav__logo" src="./assets/images/shared/desktop/logo-dark.png" alt="designo logo">
+        <ul class="nav__list">
+          <li><a href="about.html">Our Company</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
-      <div class="hero">
-        <div class="container">
-          <div class="article text-component">
-            <h1>Award-winning custom designs and digital branding solutions</h1>
-            <p>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design,
-            and engaging brand experiences. Find out more about our services.</p>
-            <div class="btn btn--subtle"><a href="about.html">Learn more</a></div>
-          </div>
-          <div class="hero__image"><img src="./assets/images/home/desktop/image-hero-phone.png" alt="mobile phone with image of lamp"></div>
+      <div class="hero container">
+        <div class="article text-component">
+          <h1>Award-winning custom designs and digital branding solutions</h1>
+          <p>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design,
+          and engaging brand experiences. Find out more about our services.</p>
+          <a class="btn btn--subtle" href="about.html">Learn more</a>
         </div>
+        <div class="hero__image"><img src="./assets/images/home/desktop/image-hero-phone.png" alt="mobile phone with image of lamp"></div>
       </div>
     </header>
   </div>
   <main>
     <section class="design-services">
-      <div class="container">
-        <div class="image-cards">
-          <a class="image-card" href="web-design.html"></a>
-            <div class="text-component">
-              <h2 class="image-card__title">Web Design</h2>
-              <p class="image-card__text">View Projects</p>
-            </div>
-          </a>
-          <a class="image-card" href="app-design.html"></a>
-            <div class="text-component">
-              <h2 class="image-card__title">App Design</h2>
-              <p class="image-card__text">View Projects</p>
-            </div>
-          </a>
-          <a class="image-card" href="graphic-design.html"></a>
-            <div class="text-component">
-              <h2 class="image-card__title">Graphic Design</h2>
-              <p class="image-card__text">View Projects</p>
-            </div>
-          </a>
-        </div>
+      <div class="image-cards container">
+        <a class="image-card" href="web-design.html"></a>
+          <div class="text-component">
+            <h2 class="image-card__title">Web Design</h2>
+            <p class="image-card__text">View Projects</p>
+          </div>
+        </a>
+        <a class="image-card" href="app-design.html"></a>
+          <div class="text-component">
+            <h2 class="image-card__title">App Design</h2>
+            <p class="image-card__text">View Projects</p>
+          </div>
+        </a>
+        <a class="image-card" href="graphic-design.html"></a>
+          <div class="text-component">
+            <h2 class="image-card__title">Graphic Design</h2>
+            <p class="image-card__text">View Projects</p>
+          </div>
+        </a>
       </div>
     </section>
 
     <section class="passionate">
-      <div class="container">
-        <div class="icon-cards">
-          <div class="icon-card">
-            <div class="icon-card__icon">
-              <img src="./assets/images/home/desktop/illustration-passionate.svg" alt="man writing on tablet">
-            </div>
-            <h3 class="icon-card__title">Passionate</h3>
-            <p>Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge
-            art, design, and technology into exciting new solutions.</p>
+      <div class="icon-cards container">
+        <div class="icon-card">
+          <div class="icon-card__icon">
+            <img src="./assets/images/home/desktop/illustration-passionate.svg" alt="man writing on tablet">
           </div>
+          <h3 class="icon-card__title">Passionate</h3>
+          <p>Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge
+          art, design, and technology into exciting new solutions.</p>
         </div>
         <div class="icon-card">
           <div class="icon-card__icon">
@@ -79,17 +71,15 @@
           <h3 class="icon-card__title">Resourceful</h3>
           <p>Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer
           collaboration. It guarantees superior results that fulfill our clients’ needs.</p>
-          </div>
         </div>
         <div class="icon-card">
-            <div class="icon-card__icon">
-              <img src="./assets/images/home/desktop/illustration-friendly.svg" alt="man writing on tablet">
-            </div>
-            <h3 class="icon-card__title">Friendly</h3>
-            <p>We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we
-            strive to give them the best experience a company can provide.
-            </p>
+          <div class="icon-card__icon">
+            <img src="./assets/images/home/desktop/illustration-friendly.svg" alt="man writing on tablet">
           </div>
+          <h3 class="icon-card__title">Friendly</h3>
+          <p>We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we
+          strive to give them the best experience a company can provide.
+          </p>
         </div>
       </div>
     </section>

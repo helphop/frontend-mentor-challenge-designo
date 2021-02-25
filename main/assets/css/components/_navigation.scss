@@ -22,16 +22,25 @@
      gap: var(--space-lg);
     width: 100%;
     padding: var(--space-xl) var(--component-padding);
-    transition: all 04s;
-
-    li a {
-      font-size: 1.5rem;
-    }
-    display: none;
+    transition: opacity 04s;
+    visibility: hidden;
     opacity: 0;
+    li a {font-size: 1.5rem;}
   }
-  &__list.open {
-    display: block;
-    opacity: 1;
+}
+
+//  ++++++++++++++++
+//  + nav control +
+//  ++++++++++++++++
+
+.nav {
+  &__icon--close {display: none;}
+  &.open {
+    .nav__list {
+      visibility: visible;
+      opacity: 1;
+    }
+    .nav__icon--open {display: none;}
+    .nav__icon--close {display: block;}
   }
 }

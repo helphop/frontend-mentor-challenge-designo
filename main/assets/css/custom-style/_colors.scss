@@ -13,7 +13,8 @@
   @include defineColorHSL(--color-accent-lighter, 349, 75%, 67%);
 
   @include defineColorHSL(--color-black, 270, 3%, 11%);
-  @include defineColorHSL(--color-black-light, 264, 5%, 20%);
+  @include defineColorHSL(--color-black-light, 264, 4%, 11%);
+  @include defineColorHSL(--color-black-lighter, 264, 5%, 20%);
   @include defineColorHSL(--color-white, 0, 0%, 100%);
   @include defineColorHSL(--color-white-dark, 210, 17%, 95%);
 

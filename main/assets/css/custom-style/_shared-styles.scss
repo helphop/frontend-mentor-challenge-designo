@@ -15,6 +15,23 @@ a, .link {
   @include breakpoint(lg) {--component-padding: 10.3125rem;}
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    max-width: 202px;
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--space-lg);
+    li a {
+      text-transform: uppercase;
+    }
+  }
+}
 
 
 

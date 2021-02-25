@@ -57,6 +57,11 @@ a, .link {
   color: inherit;
 }
 
+li a {
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+}
+
 mark {
   background-color: alpha(var(--color-accent), 0.2);
   color: inherit;

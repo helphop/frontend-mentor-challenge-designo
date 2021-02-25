@@ -9,11 +9,12 @@ a, .link {
   }
 }
 
-.container.container--outer {
-  max-width: var(--max-width-xl);
-  --component-padding: 0;
-}
-
 .container {
   --component-padding: 10.3125rem;
+  @include breakpoint(sm) {--component-padding: 10.3125rem;}
+  @include breakpoint(lg) {--component-padding: 10.3125rem;}
 }
+
+
+
+

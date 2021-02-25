@@ -3,12 +3,6 @@
   --radius: 0.9375em; // border radius base size
 }
 
-a, .link {
-  &:hover, &:focus {
-    text-decoration: underline;
-  }
-}
-
 .container {
   --component-padding: 10.3125rem;
   @include breakpoint(sm) {--component-padding: 10.3125rem;}
@@ -27,11 +21,6 @@ a, .link {
     display: grid;
     grid-auto-flow: column;
     gap: var(--space-lg);
-    li a {
-      text-transform: uppercase;
-    }
   }
 }
-
-
 

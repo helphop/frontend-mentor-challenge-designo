@@ -60,6 +60,10 @@ a, .link {
 li a {
   font-size: 0.875rem;
   letter-spacing: 2px;
+  text-transform: uppercase;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
 }
 
 mark {

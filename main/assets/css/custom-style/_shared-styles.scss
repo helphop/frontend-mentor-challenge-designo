@@ -4,22 +4,6 @@
 }
 
 
-.nav.container {
-  background: pink;
-}
-
-.hero.container {
- background: red;
-  --component-padding: 0;
-  @include breakpoint(sm) {--component-padding: var(--space-xl);}
-  @include breakpoint(lg) {--component-padding: var(--space-xxl);}
-  @include breakpoint(xl) {--component-padding: 10.3125rem;}
-}
-
-.hero .article {
-  padding: var(--component-padding);
-}
-
 
 
 

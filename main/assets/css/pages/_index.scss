@@ -1,0 +1,27 @@
+
+.nav {
+  background: pink;
+}
+
+.header__wrapper {
+  background: turquoise;
+  width: 100%;
+  position: fixed;
+  z-index: var(--zindex-header);
+}
+
+.hero {
+  padding-top: var(--nav-height);
+  .container {
+  background: red;
+  padding-top: var(--space-xl);
+    --component-padding: 0;
+    @include breakpoint(sm) {--component-padding: var(--space-xl);}
+    @include breakpoint(lg) {--component-padding: var(--space-xxl);}
+    @include breakpoint(xl) {--component-padding: 10.3125rem;}
+    z-index: 0;
+  }
+  .article {
+   padding: var(--component-padding);
+  }
+}

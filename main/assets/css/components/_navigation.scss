@@ -1,11 +1,11 @@
 :root {
-  --header-height: calc(2.5 * var(--space-xl));
+  --nav-height: calc(2.5 * var(--space-xl));
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: var(--header-height);
+  height: var(--nav-height);
 
   &__logo {
     max-width: 12.625rem;
@@ -16,13 +16,14 @@
     background: var(--color-black-light);
     color: var(--color-white);
     position: absolute;
-    top: var(--header-height);
+    top: var(--nav-height);
     left: 0;
     display: grid;
      gap: var(--space-lg);
     width: 100%;
     padding: var(--space-xl) var(--component-padding);
     transition: all 04s;
+
     li a {
       font-size: 1.5rem;
     }

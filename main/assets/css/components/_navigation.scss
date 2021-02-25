@@ -1,14 +1,36 @@
+:root {
+  --header-height: calc(2.5 * var(--space-xl));
+}
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: var(--space-xl) 0;
+  align-items: center;
+  height: var(--header-height);
+
   &__logo {
     max-width: 12.625rem;
+    flex-shrink: 0;
   }
 
   &__list {
+    background: var(--color-black-light);
+    color: var(--color-white);
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
     display: grid;
-    grid-auto-flow: column;
-    gap: var(--space-lg);
+     gap: var(--space-lg);
+    width: 100%;
+    padding: var(--space-xl) var(--component-padding);
+    transition: all 04s;
+    li a {
+      font-size: 1.5rem;
+    }
+    display: none;
+    opacity: 0;
+  }
+  &__list.open {
+    display: block;
+    opacity: 1;
   }
 }

@@ -1,0 +1,14 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-xl) 0;
+  &__logo {
+    max-width: 12.625rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--space-lg);
+  }
+}

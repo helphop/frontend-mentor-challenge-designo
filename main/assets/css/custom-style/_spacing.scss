@@ -14,7 +14,7 @@
   --space-xxl: calc(3.375 * var(--space-unit));
   --space-xxxl: calc(5.063 * var(--space-unit));
   --space-xxxxl: calc(7.59 * var(--space-unit));
-  --component-padding: var(--space-xxxl);
+  --component-padding: var(--space-md);
 }
 
 @supports(--css: variables) {
@@ -22,19 +22,8 @@
     :root {
       --space-unit: 1.2em;
     }
-
     :root, * {
-      --space-xxxxs: calc(0.133 * var(--space-unit));
-      --space-xxxs: calc(0.2 * var(--space-unit));
-      --space-xxs: calc(0.296 * var(--space-unit));
-      --space-xs: calc(0.444 * var(--space-unit));
-      --space-sm: calc(0.667 * var(--space-unit));
-      --space-md: calc(1 * var(--space-unit));
-      --space-lg: calc(1.5 * var(--space-unit));
-      --space-xl: calc(2.25 * var(--space-unit));
-      --space-xxl: calc(3.375 * var(--space-unit));
-      --space-xxxl: calc(5.063 * var(--space-unit));
-      --space-xxxxl: calc(7.59 * var(--space-unit));
+      --component-padding: var(--space-xl);
     }
   }
 
@@ -55,6 +44,13 @@
       --space-xxl: calc(4.236 * var(--space-unit));
       --space-xxxl: calc(6.854 * var(--space-unit));
       --space-xxxxl: calc(11.08 * var(--space-unit));
+      --component-padding: var(--space-xxl);
+    }
+  }
+
+  @include breakpoint(xl) {
+    :root, * {
+      --component-padding: 10.3125rem;
     }
   }
 }

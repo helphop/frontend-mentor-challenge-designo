@@ -3,24 +3,29 @@
   --radius: 0.9375em; // border radius base size
 }
 
-.container {
-  --component-padding: 10.3125rem;
-  @include breakpoint(sm) {--component-padding: 10.3125rem;}
-  @include breakpoint(lg) {--component-padding: 10.3125rem;}
+header {
+  // background: green;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-
-  &__logo {
-    max-width: 202px;
-  }
-
-  &__list {
-    display: grid;
-    grid-auto-flow: column;
-    gap: var(--space-lg);
-  }
+.nav.container {
+  background: pink;
 }
+
+.hero.container {
+ background: red;
+  --component-padding: 0;
+  @include breakpoint(sm) {--component-padding: var(--space-xl);}
+  @include breakpoint(lg) {--component-padding: var(--space-xxl);}
+  @include breakpoint(xl) {--component-padding: 10.3125rem;}
+}
+
+.hero .article {
+  padding: var(--component-padding);
+}
+
+
+
+
+
+
 

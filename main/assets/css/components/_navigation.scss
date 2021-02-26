@@ -49,11 +49,13 @@
 
 .nav {
   &__icon--close {display: none;}
+  &__icon { cursor: pointer;}
   &.open {
     .nav__list {
       visibility: visible;
       opacity: 1;
     }
+
     .nav__icon--open {display: none;}
     .nav__icon--close {display: block;}
   }

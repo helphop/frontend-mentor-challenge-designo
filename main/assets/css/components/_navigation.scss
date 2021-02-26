@@ -22,7 +22,7 @@
      gap: var(--space-lg);
     width: 100%;
     padding: var(--space-xl) var(--component-padding);
-    transition: all .8s ease-in-out;
+    transition: all .4s ease-in-out;
     visibility: hidden;
     opacity: 0;
     li a {font-size: 1.5rem;}
@@ -55,7 +55,6 @@
       visibility: visible;
       opacity: 1;
     }
-
     .nav__icon--open {display: none;}
     .nav__icon--close {display: block;}
   }

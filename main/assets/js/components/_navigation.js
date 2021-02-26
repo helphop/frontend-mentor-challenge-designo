@@ -19,8 +19,10 @@ window.addEventListener('keyup', function(event){
       setMenuState();
     }
   }
-
 });
 
 const toggleMenu = () => nav.classList.toggle("open")
-const setMenuState = () => isOpen = nav.classList.contains('open')
+const setMenuState = () => {
+  isOpen = nav.classList.contains('open')
+  navList.setAttribute("aria-expanded", isOpen)
+}

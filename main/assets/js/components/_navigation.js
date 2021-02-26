@@ -21,8 +21,28 @@ window.addEventListener('keyup', function(event){
   }
 });
 
+window.addEventListener('resize', () =>  setTimeout( function() {
+  if(window.innerWidth > 768) {
+    resetMenuState()
+  } else {
+    setMenuState()
+  }
+}, 500));
+
 const toggleMenu = () => nav.classList.toggle("open")
+
 const setMenuState = () => {
   isOpen = nav.classList.contains('open')
   navList.setAttribute("aria-expanded", isOpen)
+  openTrigger.setAttribute("aria-hidden", isOpen)
+  closeTrigger.setAttribute("aria-hidden", !isOpen)
 }
+
+const resetMenuState = () => {
+  nav.classList.remove('open')
+  navList.setAttribute("aria-expanded", false)
+  openTrigger.setAttribute("aria-hidden", true)
+  closeTrigger.setAttribute("aria-hidden", true)
+}
+
+

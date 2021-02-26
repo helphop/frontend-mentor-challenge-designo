@@ -13,11 +13,11 @@
     <header class="header">
       <div class="header__wrapper">
         <div class="container">
-          <nav class="nav">
+          <nav class="nav" role="navigation" aria-label="Main">
             <div class="nav__logo"><img class="nav__logo" src="./assets/images/shared/desktop/logo-dark.png" alt="designo logo"></div>
-            <div id="navIconOpen" class="nav__icon nav__icon--open"><img src="./assets/images/shared/mobile/icon-hamburger.svg" alt="menu icon"></div>
-            <div id="navIconClose" class="nav__icon nav__icon--close"><img src="./assets/images/shared/mobile/icon-close.svg" alt="x icon"></div>
-            <ul class="nav__list">
+            <div class="nav__icon nav__icon--open" aria-label="Open menu"  aria-hidden="true" aria-controls="header-nav-list"><img src="./assets/images/shared/mobile/icon-hamburger.svg" alt="menu icon"></div>
+            <div class="nav__icon nav__icon--close" aria-label="Close menu"  aria-hidden="true" aria-controls="header-nav-list"><img src="./assets/images/shared/mobile/icon-close.svg" alt="x icon"></div>
+            <ul class="nav__list" id="header-nav-list" aria-expanded="false">
               <li><a href="about.html">Our Company</a></li>
               <li><a href="locations.html">Locations</a></li>
               <li><a href="contact.html">Contact</a></li>

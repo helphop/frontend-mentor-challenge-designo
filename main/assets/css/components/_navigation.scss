@@ -22,7 +22,7 @@
      gap: var(--space-lg);
     width: 100%;
     padding: var(--space-xl) var(--component-padding);
-    transition: opacity 04s;
+    transition: all .8s ease-in-out;
     visibility: hidden;
     opacity: 0;
     li a {font-size: 1.5rem;}

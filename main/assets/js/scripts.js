@@ -321,7 +321,7 @@ Math.easeOutElastic = function (t, b, c, d) {
 function resetFocusTabsStyle() {
   window.dispatchEvent(new CustomEvent('initFocusTabs'));
 };
-const nav = document.querySelector(".header .nav")
+const nav = document.querySelector(".navigation .nav")
 const openTrigger = nav.querySelector(".nav__icon--open")
 const closeTrigger = nav.querySelector(".nav__icon--close")
 const navList = document.querySelector(".nav__list")

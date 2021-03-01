@@ -1,0 +1,65 @@
+:root {
+  --nav-height: calc(2.5 * var(--space-xl));
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--nav-height);
+
+  &__logo {
+    max-width: 12.625rem;
+    flex-shrink: 0;
+  }
+
+  &__list {
+    background: var(--color-black-light);
+    color: var(--color-white);
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    display: grid;
+     gap: var(--space-lg);
+    width: 100%;
+    padding: var(--space-xl) var(--component-padding);
+    transition: all .4s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    li a {font-size: 1.5rem;}
+    @include breakpoint(sm) {
+      visibility: visible;
+      opacity: 1;
+      background: inherit;
+      position: static;
+      grid-auto-flow: column;
+      gap: var(--space-md);
+      width: auto;
+      padding: 0;
+      li a {
+        font-size: initial;
+        color: initial;
+      }
+    }
+  }
+}
+
+//  ++++++++++++++++
+//  + nav control +
+//  ++++++++++++++++
+
+.nav {
+  &__icon--close {display: none;}
+  &__icon { cursor: pointer;}
+  &.open {
+    .nav__list {
+      visibility: visible;
+      opacity: 1;
+    }
+    .nav__icon--open {display: none;}
+    .nav__icon--close {display: block;}
+  }
+  @include breakpoint(sm) {
+    &__icon {display: none;}
+  }
+}
+

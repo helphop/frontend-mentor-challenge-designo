@@ -1,0 +1,36 @@
+.header__wrapper {
+  background: turquoise;
+  width: 100%;
+  position: fixed;
+  z-index: var(--zindex-header);
+  margin: 0 auto;
+  @include breakpoint(sm) {
+    position: static;
+  }
+}
+
+.nav {
+  background: pink;
+}
+
+.hero {
+  padding-top: var(--nav-height);
+  .container {
+  background: red;
+  padding-top: var(--space-xl);
+  --component-padding: 0; //removes padding on sides
+  }
+
+  .article {
+   padding: var(--component-padding); //aligns text vertically
+  }
+
+  @include breakpoint(sm) {
+    padding-top: 0;
+    .container {--component-padding: var(--space-xl);}
+    }
+
+  @include breakpoint(lg) {
+    .container {--component-padding: var(--space-xxl);}
+  }
+}

@@ -9,15 +9,40 @@
 
 header {
   margin-top: var(--nav-height); //move content down for fixed menu
-  background-color: red; //so bg colour appears to take up full width
+  background-color: var(--color-primary); //so bg colour appears to take up full width
+  color: var(--color-white);
 
-  .container {
-    background: red;
+  .hero {
+   background-color: var(--color-primary);
   }
 
-  @include breakpoint(sm) {
+
+
+  @include breakpoint(md) {
     background-color: initial;
     margin-top: initial;
+    .hero {
+      border-radius: var(--radius);
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: var(--space-xxxl) 1fr var(--space-xxxl)
     }
 
+    .hero__image {
+      background: url(../images/home/desktop/image-hero-phone.png) no-repeat;
+      background-position: left 80px top -10px;
+      background-size: cover;
+      grid-row: 1 / -1;
+      grid-column: 6 / -1;
+    }
+
+    .hero {
+      .article.text-component {
+        --text-vspace-multiplier: 1.8;
+        grid-row: 2 / 3;
+        grid-column: 2 / span 6;
+        p {max-width: 45ch;}
+      }
+    }
+  }
 }

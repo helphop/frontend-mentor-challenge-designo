@@ -15,11 +15,10 @@
 
   &__list {
     background: var(--color-black-light);
-    color: var(--color-white);
+    color: var(--fg, var(--color-white));
     display: grid;
      gap: var(--space-lg);
     padding: var(--space-xl) var(--component-padding);
-
   }
 
   @include breakpoint(sm) {
@@ -29,10 +28,6 @@
       grid-auto-flow: column;
       gap: var(--space-md);
      padding: 0;
-      li a {
-        font-size: initial;
-        color: initial;
-      }
     }
   }
 }
@@ -43,10 +38,10 @@
     position: absolute;
     top: var(--nav-height);
     left: 0;
-    transition: all .4s ease-in-out;
     visibility: hidden;
     opacity: 0;
     width: 100%;
+     transition: all .4s ease-in-out;
     li a {font-size: 1.5rem;}
     @include breakpoint(sm) {
      visibility: visible;
@@ -54,17 +49,22 @@
       width: auto;
       background: inherit;
       position: static;
+      li a {
+        font-size: initial;
+        color: initial;
+      }
     }
   }
-  .nav__icon--close {display: none;}
+
   .nav__icon { cursor: pointer;}
+  .nav__icon--close {display: none;}
   &.open {
     .nav__list {
       visibility: visible;
       opacity: 1;
     }
     .nav__icon--open {display: none;}
-    .nav__icon--close {display: block;}
+    .nav__icon--close {display: inline-block;}
   }
 }
 

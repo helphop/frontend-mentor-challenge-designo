@@ -1,12 +1,19 @@
+
+// ++++++++++++++++
+// ++ NAVIGATION ++
+// ++++++++++++++++
+
 .navigation {
   width: 100%;
   position: fixed;
   z-index: var(--zindex-header);
-  margin: 0 auto;
   background: var(--color-white);
   @include breakpoint(sm) {position: static;}
 }
 
+// ++++++++++++
+// ++ HEADER ++
+// ++++++++++++
 
 header {
   margin-top: var(--nav-height); //move content down for fixed menu

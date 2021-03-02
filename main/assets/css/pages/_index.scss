@@ -70,26 +70,25 @@ header {
     .hero {
       height: 40rem;
       border-radius: var(--radius);
-      grid-template-columns: 6rem repeat(3, 1fr) 6rem;
+      grid-template-columns: 6rem repeat(12, 1fr) 6rem;
       grid-template-rows: 9.0625rem 1fr 9.0625rem;
 
       &__article {
         align-self: stretch;
         grid-row: 2 / 3;
-        grid-column: 2 / span 2;
+        grid-column: 2 / span 8;
         justify-items: start;
         --text-vspace-multiplier: 1.8;
       }
 
       &__image {
-        background-position: left -0.625rem top -1.5rem;
+        background-position: left  top -1.6rem;
         grid-row: 1 / -1;
-        grid-column: 3 / span -1;
+        grid-column: 9 / span 8;
       }
-
-
     }
   }
+
   @include breakpoint(lg) {
      .container {--component-padding: var(--space-xxl);}
   }

@@ -54,6 +54,7 @@ header {
   @include breakpoint(sm) {
     .container {--component-padding: var(--space-xl);} //match container padding of site
     margin-top: initial; //remove margin used for menu when menu was fixed;
+
     .hero {
       width: 100%;
       border-radius: var(--radius);

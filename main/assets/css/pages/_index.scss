@@ -1,12 +1,19 @@
+
+// ++++++++++++++++
+// ++ NAVIGATION ++
+// ++++++++++++++++
+
 .navigation {
   width: 100%;
   position: fixed;
   z-index: var(--zindex-header);
-  margin: 0 auto;
   background: var(--color-white);
   @include breakpoint(sm) {position: static;}
 }
 
+// ++++++++++++
+// ++ HEADER ++
+// ++++++++++++
 
 header {
   margin-top: var(--nav-height); //move content down for fixed menu
@@ -54,29 +61,21 @@ header {
     .hero {
       width: 100%;
       border-radius: var(--radius);
-      display: grid;
-      grid-template-columns: 0.15fr 1fr 0.15fr;
-      justify-content: center;
+      grid-template-columns: 1fr;
       grid-template-rows: 3.75rem repeat(18, 1fr);
 
       &__article {
-        --text-vspace-multiplier: 1.8;
-        grid-column: 2 / span 1;
+        grid-column: 1;
         grid-row: 2 / 10 ;
-        display: grid;
-        justify-items: center;
-        justify-content: center;
-        h1 { max-width: 20ch}
         p {max-width: 45ch;}
+         --text-vspace-multiplier: 1.8; //controls the vertical rhythm
       }
 
       &__image {
         background: url(../images/home/desktop/image-hero-phone.png) no-repeat;
         background-size: cover;
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 7 / -1;
-        min-width: 39.25rem;
-        justify-self: center;
       }
     }
   }
@@ -86,14 +85,12 @@ header {
       height: auto;
       border-radius: var(--radius);
       grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: 0.48fr 1fr 0.48fr;
+      grid-template-rows: 0.38fr 1fr 0.38fr;
 
       &__image {
         background-position: left top -2em;
-        background-size: cover;
         grid-row: 1 / -1;
         grid-column: 8 / span 8;
-        min-width: 39.25rem;
       }
 
       &__article {
@@ -103,5 +100,8 @@ header {
         grid-column: 2 / span 7;
       }
     }
+  }
+  @include breakpoint(lg) {
+     .container {--component-padding: var(--space-xxl);}
   }
 }

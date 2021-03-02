@@ -4,14 +4,14 @@
 
   // font size
   --text-base-size: 1em; // body font-size
-  --text-scale-ratio: 1.333; // multiplier used to generate the type scale values 👇
+  --text-scale-ratio: 1.2; // multiplier used to generate the type scale values 👇
 
   // line-height
   --body-line-height: 1.625;
-  --heading-line-height: 1;
+  --heading-line-height: 1.125;
 
   // capital letters - used in combo with the lhCrop mixin
-  --font-primary-capital-letter: 0.9;
+  --font-primary-capital-letter: 1;
 
   // unit - don't modify unless you want to change the typography unit (e.g., from Em to Rem units)
   --text-unit: 1em; // if not Em units → --text-unit: var(--text-base-size);
@@ -27,6 +27,15 @@
   --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
   --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
   --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+}
+
+@supports(--css: variables) {
+  @include breakpoint(sm) {
+    :root {
+      --text-base-size: 1em;
+      --text-scale-ratio: 1.333;
+    }
+  }
 }
 
 body {

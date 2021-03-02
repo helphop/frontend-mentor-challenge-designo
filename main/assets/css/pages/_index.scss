@@ -3,25 +3,56 @@
   position: fixed;
   z-index: var(--zindex-header);
   margin: 0 auto;
+  background: var(--color-white);
   @include breakpoint(sm) {position: static;}
 }
 
 
 header {
   margin-top: var(--nav-height); //move content down for fixed menu
-  background-color: var(--color-primary); //so bg colour appears to take up full width
   color: var(--color-white);
+  .container {--component-padding: 0;} //makes the hero span the full width;
 
   .hero {
+   width: 100vw;
    background-color: var(--color-primary);
    height: 843px;
+   display: grid;
+    grid-template-columns: auto 1fr auto;
+   justify-content: center;
+   justify-items: center;
+    grid-template-rows: 3.75rem repeat(18, 1fr);
+    align-items: start;
+    overflow: hidden;
+
+    &__article {
+      --text-vspace-multiplier: 3;
+      grid-column: 2 / span 1;
+      grid-row: 2 / 10 ;
+      display: grid;
+      justify-items: center;
+      justify-content: center;
+      h1 { max-width: 20ch}
+      p {max-width: 35ch;}
+    }
+
+    &__image {
+      background: url(../images/home/desktop/image-hero-phone.png) no-repeat;
+      background-size: cover;
+      grid-column: 2;
+      grid-row: 7 / -1;
+      width: 39.25rem;
+      align-self: stretch;
+    }
+
   }
 
   @include breakpoint(sm) {
+    .container {--component-padding: var(--space-xl);}
     background-color: initial;
     margin-top: initial;
     .hero {
-      text-align: center;
+      width: 100%;
       border-radius: var(--radius);
       display: grid;
       grid-template-columns: 0.15fr 1fr 0.15fr;

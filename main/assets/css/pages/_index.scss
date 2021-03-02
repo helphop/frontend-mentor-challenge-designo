@@ -14,13 +14,16 @@ header {
   .container {--component-padding: 0;} //makes the hero span the full width;
 
   .hero {
+   width: 100vw;
    background-color: var(--color-primary);
    height: 843px;
    display: grid;
-    grid-template-columns: 0.15fr 1fr 0.15fr;
+    grid-template-columns: auto 1fr auto;
    justify-content: center;
+   justify-items: center;
     grid-template-rows: 3.75rem repeat(18, 1fr);
     align-items: start;
+    overflow: hidden;
 
     &__article {
       --text-vspace-multiplier: 3;
@@ -33,12 +36,23 @@ header {
       p {max-width: 35ch;}
     }
 
+    &__image {
+      background: url(../images/home/desktop/image-hero-phone.png) no-repeat;
+      background-size: cover;
+      grid-column: 2;
+      grid-row: 7 / -1;
+      width: 39.25rem;
+      align-self: stretch;
+    }
+
   }
 
   @include breakpoint(sm) {
+    .container {--component-padding: var(--space-xl);}
     background-color: initial;
     margin-top: initial;
     .hero {
+      width: 100%;
       border-radius: var(--radius);
       display: grid;
       grid-template-columns: 0.15fr 1fr 0.15fr;

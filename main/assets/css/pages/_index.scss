@@ -68,23 +68,26 @@ header {
 
   @include breakpoint(md) {
     .hero {
-      height: auto;
+      height: 40rem;
       border-radius: var(--radius);
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: 0.38fr 1fr 0.38fr;
-
-      &__image {
-        background-position: left top -2em;
-        grid-row: 1 / -1;
-        grid-column: 8 / span 8;
-      }
+      grid-template-columns: 6rem repeat(3, 1fr) 6rem;
+      grid-template-rows: 9.0625rem 1fr 9.0625rem;
 
       &__article {
+        align-self: stretch;
+        grid-row: 2 / 3;
+        grid-column: 2 / span 2;
         justify-items: start;
         --text-vspace-multiplier: 1.8;
-        grid-row: 2 / 3;
-        grid-column: 2 / span 7;
       }
+
+      &__image {
+        background-position: left -0.625rem top -1.5rem;
+        grid-row: 1 / -1;
+        grid-column: 3 / span -1;
+      }
+
+
     }
   }
   @include breakpoint(lg) {

@@ -27,16 +27,15 @@ header {
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3.75rem repeat(18, 1fr);
+    grid-template-rows: 3.75rem repeat(10, 1fr);
     justify-content: center;
     justify-items: center;
 
     &__article {
       --text-vspace-multiplier: 2.5; //controls the vertical rhythm
       grid-column: 1;
-      grid-row: 2 / 10 ;
+      grid-row: 2 / 4 ;
       align-self: start;
-
       display: grid;
       justify-items: center;
       h1 { max-width: 20ch; }
@@ -47,10 +46,9 @@ header {
       background: url(../images/home/desktop/image-hero-phone.png) no-repeat;
       background-size: cover;
       grid-column: 1;
-      grid-row: 7 / -1;
+      grid-row: 5 / -1;
       width: 39.25rem;
     }
-
   }
 
   @include breakpoint(sm) {

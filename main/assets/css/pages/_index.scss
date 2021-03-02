@@ -52,9 +52,10 @@ header {
 
   @include breakpoint(md) {
     .hero {
+      height: auto;
       border-radius: var(--radius);
       grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: 0.46fr 1fr 0.46fr;
+      grid-template-rows: 0.48fr 1fr 0.48fr;
 
       &__image {
         background-position: left top -2em;

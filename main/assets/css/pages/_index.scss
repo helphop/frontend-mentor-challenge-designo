@@ -21,7 +21,9 @@ header {
   .container {--component-padding: 0;} //makes the hero span the full width;
 
   .hero {
-    background-color: var(--color-primary);
+    background: url(../images/home/desktop/bg-pattern-hero-home.svg) no-repeat, var(--color-primary);
+    background-position: left top 5.5rem;
+    background-size: 180%;
     height: 52.68rem;
     width: 100vw; //restricts overflow from image
     overflow: hidden;
@@ -56,7 +58,6 @@ header {
     margin-top: initial; //remove margin used for menu when menu was fixed;
 
     .hero {
-      background: url(../images/home/desktop/bg-pattern-hero-home.svg) no-repeat, var(--color-primary);
       background-position: right -7.5rem top 6.25rem;
       background-size: 90%;
       width: 100%;

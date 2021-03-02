@@ -14,6 +14,7 @@ header {
 
   .hero {
    background-color: var(--color-primary);
+   height: 843px;
   }
 
   @include breakpoint(sm) {
@@ -24,12 +25,13 @@ header {
       border-radius: var(--radius);
       display: grid;
       grid-template-columns: 0.15fr 1fr 0.15fr;
-      grid-template-rows: repeat(12, 1fr);
+      justify-content: center;
+      grid-template-rows: 3.75rem repeat(18, 1fr);
 
       &__article {
         --text-vspace-multiplier: 1.8;
         grid-column: 2 / span 1;
-        grid-row: 2 / 7 ;
+        grid-row: 2 / 10 ;
         display: grid;
         justify-items: center;
         justify-content: center;
@@ -41,9 +43,8 @@ header {
         background: url(../images/home/desktop/image-hero-phone.png) no-repeat;
         background-size: cover;
         grid-column: 2;
-        grid-row: 6/ -1;
-        width: 100%;
-        max-width: 32.85rem;
+        grid-row: 7 / -1;
+        min-width: 39.25rem;
         justify-self: center;
       }
     }
@@ -53,14 +54,14 @@ header {
     .hero {
       border-radius: var(--radius);
       grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: 0.333fr 1fr 0.333fr;
+      grid-template-rows: 0.46fr 1fr 0.46fr;
 
       &__image {
-        background-position: left top -3em;
+        background-position: left top -2em;
         background-size: cover;
         grid-row: 1 / -1;
         grid-column: 8 / span 8;
-        min-width: 35rem;
+        min-width: 39.25rem;
       }
 
       &__article {

@@ -4,10 +4,10 @@
 // ++++++++++++++++
 
 .navigation {
-  width: 100%;
-  position: fixed;
-  z-index: var(--zindex-header);
   background: var(--color-white);
+  position: fixed;
+  width: 100%;
+  z-index: var(--zindex-header); //keep menu on top of all other content
   @include breakpoint(sm) {position: static;}
 }
 
@@ -21,86 +21,74 @@ header {
   .container {--component-padding: 0;} //makes the hero span the full width;
 
   .hero {
-   width: 100vw;
-   background-color: var(--color-primary);
-   height: 843px;
-   display: grid;
-    grid-template-columns: auto 1fr auto;
-   justify-content: center;
-   justify-items: center;
-    grid-template-rows: 3.75rem repeat(18, 1fr);
-    align-items: start;
+    background-color: var(--color-primary);
+    height: 52.68rem;
+    width: 100vw; //restricts overflow from image
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3.75rem repeat(10, 1fr);
+    justify-content: center;
+    justify-items: center;
 
     &__article {
-      --text-vspace-multiplier: 3;
-      grid-column: 2 / span 1;
-      grid-row: 2 / 10 ;
+      --text-vspace-multiplier: 2.5; //controls the vertical rhythm
+      grid-column: 1;
+      grid-row: 2 / 4 ;
+      align-self: start;
       display: grid;
       justify-items: center;
-      justify-content: center;
-      h1 { max-width: 20ch}
-      p {max-width: 35ch;}
+      h1 { max-width: 20ch; }
+      p {max-width: 35ch; }
     }
 
     &__image {
       background: url(../images/home/desktop/image-hero-phone.png) no-repeat;
       background-size: cover;
-      grid-column: 2;
-      grid-row: 7 / -1;
+      grid-column: 1;
+      grid-row: 5 / -1;
       width: 39.25rem;
-      align-self: stretch;
     }
-
   }
 
   @include breakpoint(sm) {
-    .container {--component-padding: var(--space-xl);}
-    background-color: initial;
-    margin-top: initial;
+    .container {--component-padding: var(--space-xl);} //match container padding of site
+    margin-top: initial; //remove margin used for menu when menu was fixed;
+
     .hero {
       width: 100%;
       border-radius: var(--radius);
-      grid-template-columns: 1fr;
-      grid-template-rows: 3.75rem repeat(18, 1fr);
 
       &__article {
-        grid-column: 1;
-        grid-row: 2 / 10 ;
-        p {max-width: 45ch;}
          --text-vspace-multiplier: 1.8; //controls the vertical rhythm
-      }
-
-      &__image {
-        background: url(../images/home/desktop/image-hero-phone.png) no-repeat;
-        background-size: cover;
-        grid-column: 1;
-        grid-row: 7 / -1;
+        p {max-width: 45ch;}
       }
     }
   }
 
   @include breakpoint(md) {
     .hero {
-      height: auto;
+      height: 40rem;
       border-radius: var(--radius);
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: 0.38fr 1fr 0.38fr;
-
-      &__image {
-        background-position: left top -2em;
-        grid-row: 1 / -1;
-        grid-column: 8 / span 8;
-      }
+      grid-template-columns: 6rem repeat(12, 1fr) 6rem;
+      grid-template-rows: 9.0625rem 1fr 9.0625rem;
 
       &__article {
+        align-self: stretch;
+        grid-row: 2 / 3;
+        grid-column: 2 / span 8;
         justify-items: start;
         --text-vspace-multiplier: 1.8;
-        grid-row: 2 / 3;
-        grid-column: 2 / span 7;
+      }
+
+      &__image {
+        background-position: left  top -1.6rem;
+        grid-row: 1 / -1;
+        grid-column: 9 / span 8;
       }
     }
   }
+
   @include breakpoint(lg) {
      .container {--component-padding: var(--space-xxl);}
   }

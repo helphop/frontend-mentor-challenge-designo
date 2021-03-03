@@ -1,18 +1,3 @@
-
-// ++++++++++++++++++++++++
-// ++ NAVIGATION SECTION ++
-// ++++++++++++++++++++++++
-
-.navigation {
-  background: var(--color-white);
-  position: fixed;
-  width: 100%;
-  z-index: var(--zindex-header); //keep menu on top of all other content
-  @include breakpoint(sm) {
-    position: static;
-  }
-}
-
 // ++++++++++++++++++++
 // ++ HEADER SECTION ++
 // ++++++++++++++++++++

@@ -7,22 +7,18 @@ header {
   color: var(--color-white);
 
   .container {
-    width: 100vw; //fill full width of screen for mobile sizes
+    width: 100%; //fill full width of screen for mobile sizes
   }
 
   .hero {
     background: url(../images/home/desktop/bg-pattern-hero-home.svg) no-repeat, var(--color-primary);
     background-position: left top 5.5rem;
     background-size: 180%;
-    // height: 52.68rem;
     overflow: hidden;
-    display: grid;
-    grid-template-rows: 5rem repeat(10, 1fr);
-    justify-content: center;
-    justify-items: center;
+    padding: 5rem 0 27rem;
+    position: relative;
 
     &__article {
-      grid-row: 2 / span 2 ;
       display: grid;
       justify-items: center;
       --text-vspace-multiplier: 2.5; //controls the vertical rhythm
@@ -35,7 +31,10 @@ header {
     }
 
     &__image {
-      grid-row: 5 / -1;
+      position: absolute;
+      bottom: -45%;
+      right: 50%;
+      transform: translateX(50%);
       width: 39rem; //set the image width since it is the same size on all screens
     }
   }
@@ -44,13 +43,14 @@ header {
     margin-top: initial; //remove margin used for menu when menu was fixed;
 
      .container {
-      width: calc(100% - 2 * var(--component-padding)); //control the size of the container
+      width: var(--container-width); //control the size of the container
      }
 
     .hero {
       background-position: right -7.5rem top 6.25rem;
       background-size: 90%;
       border-radius: var(--radius);
+      padding-top: 3.75rem;
 
       &__article {
          --text-vspace-multiplier: 1.8; //controls the vertical rhythm
@@ -64,28 +64,24 @@ header {
 
   @include breakpoint(md) {
     .hero {
-      --image-padding: 172px;
-      --hero-padding-y: 145px;
-      --hero-padding-x: 96px;
+      --image-padding: 10.75rem;
+      --hero-padding-y: 9.0625rem;
+      --hero-padding-x: 6rem;
 
       background-position: right top;
       background-size: 55%;
 
       border-radius: var(--radius);
-
       padding: var(--hero-padding-y) var(--hero-padding-x);
-
-      position: relative;
-      display: block; //can remove this after I remove grid above
 
       &__article {
         justify-items: start;
       }
 
       &__image {
-        position: absolute;
         top: calc(var(--hero-padding-y) - var(--image-padding));
         right: calc(var(--hero-padding-x) - var(--image-padding));
+        transform: translateX(0%);
       }
     }
 

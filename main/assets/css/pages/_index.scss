@@ -14,7 +14,7 @@ header {
     background: url(../images/home/desktop/bg-pattern-hero-home.svg) no-repeat, var(--color-primary);
     background-position: left top 5.5rem;
     background-size: 180%;
-    height: 52.68rem;
+    // height: 52.68rem;
     overflow: hidden;
     display: grid;
     grid-template-rows: 5rem repeat(10, 1fr);
@@ -64,25 +64,28 @@ header {
 
   @include breakpoint(md) {
     .hero {
+      --image-padding: 172px;
+      --hero-padding-y: 145px;
+      --hero-padding-x: 96px;
+
       background-position: right top;
       background-size: 55%;
-      height: 40rem;
+
       border-radius: var(--radius);
-      grid-template-columns: 6rem repeat(12, 1fr) 6rem;
-      grid-template-rows: 9.125rem 1fr 9.125rem;
+
+      padding: var(--hero-padding-y) var(--hero-padding-x);
+
+      position: relative;
+      display: block; //can remove this after I remove grid above
 
       &__article {
-        grid-row: 2 / 3;
-        grid-column: 2 / span 8;
         justify-items: start;
       }
 
       &__image {
-        grid-row: 1 / -1;
-        grid-column: 9 / span 6;
-        img {
-          object-position: 6px -24px;
-        }
+        position: absolute;
+        top: calc(var(--hero-padding-y) - var(--image-padding));
+        right: calc(var(--hero-padding-x) - var(--image-padding));
       }
     }
 

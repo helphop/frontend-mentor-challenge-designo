@@ -1,23 +1,26 @@
 
-// ++++++++++++++++
-// ++ NAVIGATION ++
-// ++++++++++++++++
+// ++++++++++++++++++++++++
+// ++ NAVIGATION SECTION ++
+// ++++++++++++++++++++++++
 
 .navigation {
   background: var(--color-white);
   position: fixed;
   width: 100%;
   z-index: var(--zindex-header); //keep menu on top of all other content
-  @include breakpoint(sm) {position: static;}
+  @include breakpoint(sm) {
+    position: static;
+  }
 }
 
-// ++++++++++++
-// ++ HEADER ++
-// ++++++++++++
+// ++++++++++++++++++++
+// ++ HEADER SECTION ++
+// ++++++++++++++++++++
 
 header {
   margin-top: var(--nav-height); //move content down for fixed menu
   color: var(--color-white);
+
   .container {
     width: 100vw; //fill full width of screen for mobile sizes
   }
@@ -29,44 +32,46 @@ header {
     height: 52.68rem;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: 5rem repeat(10, 1fr);
     justify-content: center;
     justify-items: center;
 
     &__article {
-      --text-vspace-multiplier: 2.5; //controls the vertical rhythm
-      grid-column: 1;
       grid-row: 2 / span 2 ;
-      align-self: start;
       display: grid;
       justify-items: center;
-      h1 { max-width: 20ch; }
-      p {max-width: 35ch; }
+      --text-vspace-multiplier: 2.5; //controls the vertical rhythm
+      h1 {
+        max-width: 20ch;
+      }
+      p {
+        max-width: 35ch;
+      }
     }
 
     &__image {
-      grid-column: 1;
       grid-row: 5 / -1;
-      width: 39.25rem;
+      width: 39rem; //set the image width since it is the same size on all screens
     }
   }
 
   @include breakpoint(sm) {
-    .container {
-      width: calc(100% - 2 * var(--component-padding));
-    }
-    margin-top: initial; //remove margin used for menu when menu was fixed;
+     margin-top: initial; //remove margin used for menu when menu was fixed;
+
+     .container {
+      width: calc(100% - 2 * var(--component-padding)); //control the size of the container
+     }
 
     .hero {
       background-position: right -7.5rem top 6.25rem;
       background-size: 90%;
-      width: 100%;
       border-radius: var(--radius);
 
       &__article {
          --text-vspace-multiplier: 1.8; //controls the vertical rhythm
-        p {max-width: 46ch;}
+        p {
+          max-width: 46ch;
+        }
       }
     }
   }
@@ -78,10 +83,9 @@ header {
       height: 40rem;
       border-radius: var(--radius);
       grid-template-columns: 6rem repeat(12, 1fr) 6rem;
-      grid-template-rows: 9.0625rem 1fr 9.0625rem;
+      grid-template-rows: 9.125rem 1fr 9.125rem;
 
       &__article {
-        align-self: stretch;
         grid-row: 2 / 3;
         grid-column: 2 / span 8;
         justify-items: start;
@@ -91,7 +95,7 @@ header {
         grid-row: 1 / -1;
         grid-column: 9 / span 6;
         img {
-          object-position: 8px -27px;
+          object-position: 6px -24px;
         }
       }
     }

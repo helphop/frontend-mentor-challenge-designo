@@ -19,7 +19,7 @@ header {
   margin-top: var(--nav-height); //move content down for fixed menu
   color: var(--color-white);
   .container {
-    width: 100vw;
+    width: 100vw; //fill full width of screen for mobile sizes
   }
 
   .hero {
@@ -30,7 +30,7 @@ header {
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3.75rem repeat(10, 1fr);
+    grid-template-rows: 5rem repeat(10, 1fr);
     justify-content: center;
     justify-items: center;
 
@@ -53,7 +53,9 @@ header {
   }
 
   @include breakpoint(sm) {
-    .container {width: 100% }
+    .container {
+      width: calc(100% - 2 * var(--component-padding));
+    }
     margin-top: initial; //remove margin used for menu when menu was fixed;
 
     .hero {

@@ -94,7 +94,9 @@ main {
   gap: var(--space-xxxl);
 }
 
-
+// +++++++++++++++++
+// ++ IMAGE CARDS ++
+// +++++++++++++++++
 
 .image-cards {
   height: 640px;
@@ -120,5 +122,18 @@ main {
   #image-card-design {
     --card-bg-image: url(../images/home/desktop/image-graphic-design.jpg);
     grid-area: design;
+  }
+}
+
+// ++++++++++++++++++++
+// ++ SERVIVCE STYLE ++
+// ++++++++++++++++++++
+
+.service-style {
+
+  .icon-cards {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--space-lg);
   }
 }

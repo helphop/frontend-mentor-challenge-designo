@@ -1,0 +1,10 @@
+.icon-card {
+  --text-vspace-multiplier: 2;
+  text-align: center;
+  display: grid;
+  gap: 2rem;
+
+  &__title {
+    text-transform: uppercase;
+  }
+}

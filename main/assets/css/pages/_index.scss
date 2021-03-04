@@ -125,15 +125,5 @@ main {
   }
 }
 
-// ++++++++++++++++++++
-// ++ SERVIVCE STYLE ++
-// ++++++++++++++++++++
 
-.service-style {
 
-  .icon-cards {
-    display: grid;
-    grid-auto-flow: column;
-    gap: var(--space-lg);
-  }
-}

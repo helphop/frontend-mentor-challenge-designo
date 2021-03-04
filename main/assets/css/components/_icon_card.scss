@@ -5,20 +5,24 @@
 .icon-cards {
     display: grid;
     grid-auto-flow: rows;
-    gap: var(--space-lg);
+    gap: var(--space-xxxl);
 
     @include breakpoint(md) {
       grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
     }
   }
 
 .icon-card {
   text-align: center;
   display: grid;
-  grid-auto-flow: column;
-  text-align: left;
-  align-items: center;
   gap: var(--space-lg);
+
+  @include breakpoint(sm) {
+    grid-auto-flow: column;
+    text-align: left;
+    align-items: center;
+  }
 
   @include breakpoint(md) {
     text-align: center;

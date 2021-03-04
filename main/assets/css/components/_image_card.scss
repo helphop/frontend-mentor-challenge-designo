@@ -1,0 +1,35 @@
+
+.image-card {
+  border-radius: var(--radius);
+  color: var(--color-white);
+  background: var(--card-bg-image) no-repeat, transparent;
+  background-size: cover;
+  background-blend-mode: screen;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: var(--color-primary);
+  }
+
+  &__title {
+    margin-bottom: var(--space-xxs);
+  }
+
+  &__cta {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, auto);
+    gap: var(--space-sm);
+  }
+
+  &__text {
+    font-size: 0.9375rem;
+    letter-spacing: 5px;
+    justify-self: end;
+  }
+}
+

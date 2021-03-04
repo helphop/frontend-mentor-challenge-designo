@@ -87,3 +87,38 @@ header {
 
   }
 }
+
+main {
+  display: grid;
+  margin-top: var(--space-xxxl);
+  gap: var(--space-xxxl);
+}
+
+
+
+.image-cards {
+  height: 640px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'web app'
+    'web design';
+  gap: 30px;
+
+
+  #image-card-web {
+    --card-bg-image: url(../images/home/desktop/image-web-design-large.jpg);
+    grid-area: web;
+  }
+
+  #image-card-app {
+    --card-bg-image: url(../images/home/desktop/image-app-design.jpg);
+    grid-area: app;
+  }
+
+  #image-card-design {
+    --card-bg-image: url(../images/home/desktop/image-graphic-design.jpg);
+    grid-area: design;
+  }
+}

@@ -26,23 +26,32 @@
 
   &:hover{
     background-color: var(--color-primary);
-
   }
 
   &__title {
-    z-index: 100;
+    margin-bottom: var(--space-xxs);
+  }
+
+  &__cta {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-items: center;
+    gap: var(--space-sm);
   }
 
   &__text {
     font-size: 0.9375rem;
     letter-spacing: 5px;
+    justify-self: end;
   }
 
- &__cta {
-  display: flex;
-  align-items: flex-start;
-  justify-items: center;
+ .cta__icon {
+   justify-self: start;
  }
+
+
 
 }
 

@@ -1,0 +1,63 @@
+.image-cards {
+  height: 640px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'web app'
+    'web design';
+  gap: 30px;
+
+  }
+
+.image-card {
+  border-radius: var(--radius);
+  color: var(--color-white);
+  background: var(--card-bg-image) no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  background-blend-mode: screen;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.4s;
+
+  &:hover{
+    background-color: var(--color-primary);
+
+  }
+
+  &__title {
+    z-index: 100;
+  }
+
+  &__text {
+    font-size: 0.9375rem;
+    letter-spacing: 5px;
+  }
+
+ &__cta {
+  display: flex;
+  align-items: flex-start;
+  justify-items: center;
+ }
+
+}
+
+
+#image-card-web {
+  --card-bg-image: url(../images/home/desktop/image-web-design-large.jpg);
+  grid-area: web;
+}
+
+#image-card-app {
+  --card-bg-image: url(../images/home/desktop/image-app-design.jpg);
+  grid-area: app;
+}
+
+#image-card-design {
+  --card-bg-image: url(../images/home/desktop/image-graphic-design.jpg);
+  grid-area: design;
+}

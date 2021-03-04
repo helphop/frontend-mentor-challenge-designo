@@ -87,3 +87,9 @@ header {
 
   }
 }
+
+main {
+  display: grid;
+  margin-top: var(--space-xxxl);
+  gap: var(--space-xxxl);
+}

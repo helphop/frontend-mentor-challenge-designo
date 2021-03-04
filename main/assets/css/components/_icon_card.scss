@@ -1,20 +1,32 @@
-  // ++++++++++++++++++++
+// ++++++++++++++++++++
 // ++ ICON CARDS ++
 // ++++++++++++++++++++
 
-  .icon-cards {
+.icon-cards {
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: rows;
     gap: var(--space-lg);
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
 .icon-card {
   text-align: center;
   display: grid;
+  grid-auto-flow: column;
+  text-align: left;
+  align-items: center;
   gap: var(--space-lg);
 
+  @include breakpoint(md) {
+    text-align: center;
+    grid-auto-flow: row;
+  }
+
   .text-component {
-    --text-vspace-multiplier: 2;
+    --text-vspace-multiplier: 2; //controls vertical rhythm
   }
 
   &__icon {
@@ -27,3 +39,4 @@
     text-transform: uppercase;
   }
 }
+

@@ -99,18 +99,28 @@ main {
 // +++++++++++++++++
 
 .image-cards {
-  height: 640px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 12.5rem;
   grid-template-areas:
-    'web app'
-    'web design';
-  gap: 30px;
+    'web'
+    'app'
+    'design';
+  gap: 24px;
+
+  @include breakpoint(md) {
+    grid-auto-columns: 1fr;
+    grid-template-rows: repeat(2, 19.25rem);
+    grid-template-areas:
+      'web app'
+      'web design';
+    gap: 30px;
+  }
 
 
   #image-card-web {
     --card-bg-image: url(../images/home/desktop/image-web-design-large.jpg);
+    background-position: center bottom;
     grid-area: web;
   }
 

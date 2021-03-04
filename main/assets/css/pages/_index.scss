@@ -123,9 +123,15 @@ main {
 
 
   #image-card-web {
-    --card-bg-image: url(../images/home/desktop/image-web-design-large.jpg);
-    background-position: center bottom;
+    --card-bg-image: url(../images/home/desktop/image-web-design-small.jpg);
+    background-position: right -75px bottom;
+    background-size: 250%;
     grid-area: web;
+
+    @include breakpoint(sm) {
+      --card-bg-image: url(../images/home/desktop/image-web-design-large.jpg);
+      background-position: center bottom;
+    }
   }
 
   #image-card-app {

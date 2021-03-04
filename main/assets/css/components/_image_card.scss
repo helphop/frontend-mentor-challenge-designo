@@ -38,7 +38,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, auto);
-    gap: var(--space-sm);
+    gap: var(--space-md);
   }
 
   &__text {

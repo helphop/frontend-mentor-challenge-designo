@@ -1,0 +1,29 @@
+  // ++++++++++++++++++++
+// ++ ICON CARDS ++
+// ++++++++++++++++++++
+
+  .icon-cards {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--space-lg);
+  }
+
+.icon-card {
+  text-align: center;
+  display: grid;
+  gap: var(--space-lg);
+
+  .text-component {
+    --text-vspace-multiplier: 2;
+  }
+
+  &__icon {
+    background: url(../images/home/desktop/bg-pattern-hero-home.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+}

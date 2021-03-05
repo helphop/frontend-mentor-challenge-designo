@@ -1,0 +1,10 @@
+// ++++++++++++++++++++
+// ++ WIDE CARDS ++
+// ++++++++++++++++++++
+
+.wide-card {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+
+}

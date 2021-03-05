@@ -3,10 +3,10 @@
 // ++++++++++++++++++++
 
 .wide-card {
-  background-image: linear-gradient(to right, var(--color-primary) 20%, transparent 30% 100%), url(../images/shared/desktop/bg-pattern-call-to-action.svg);
-  background-position: left center;
+  background-image: linear-gradient(145deg, var(--color-primary) 35%, alpha(var(--color-primary), 0.2) 45%), url(../images/shared/desktop/bg-pattern-call-to-action.svg);
+  background-position: right center;
   border-radius: var(--radius);
-  padding: 4.5rem 6rem;
+  padding: 4rem 1.5rem;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -25,7 +25,13 @@
     max-width: 45ch;
   }
 
+  @include breakpoint(sm) {
+    background-position: left center;
+    padding: 3.625rem;
+  }
+
   @include breakpoint(md) {
+      padding: 4.5rem 6rem;
     background-position: right center;
     grid-auto-flow: column;
     justify-content: space-between;

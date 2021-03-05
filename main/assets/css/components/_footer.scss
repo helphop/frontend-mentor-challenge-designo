@@ -1,0 +1,27 @@
+// ++++++++++++++++++++
+// ++ FOOTER ++
+// ++++++++++++++++++++
+
+.footer {
+  --overlap: 4.5rem;
+  padding: calc(2 * var(--overlap)) 0 var(--overlap);
+  margin-top: calc(-1 * var(--overlap));
+  z-index: -1;
+  --nav-height: var(--space-xxl);
+  --logo-height: 27px;
+
+  .nav {
+    border-bottom: 1px solid var(--color-contrast-slight);
+  }
+
+  .contact {
+    margin-top: calc((var(--nav-height) - var(--logo-height))/2); //total nav height - logo height = space above and below logo.
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: alpha(var(--color-white), 0.5);
+
+    &__social {
+      place-self: end;
+    }
+  }
+}

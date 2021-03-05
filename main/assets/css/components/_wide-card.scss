@@ -3,17 +3,19 @@
 // ++++++++++++++++++++
 
 .wide-card {
-  background-image: url(../images/shared/desktop/bg-pattern-call-to-action.svg);
-  background-position: right center;
+  background-image: linear-gradient(to right, var(--color-primary) 20%, transparent 30% 100%), url(../images/shared/desktop/bg-pattern-call-to-action.svg);
+  background-position: left center;
   border-radius: var(--radius);
   padding: 4.5rem 6rem;
   display: grid;
-  grid-auto-flow: column;
-  justify-content: space-between;
   align-items: center;
+  justify-items: center;
+  gap: 2rem;
 
   .text-component {
     --text-vspace-multiplier: 1.2; //controls vertical spacing of text
+    display: grid;
+    justify-items: center;
   }
 
   &__title {
@@ -21,5 +23,15 @@
   }
   &__text {
     max-width: 45ch;
+  }
+
+  @include breakpoint(md) {
+    background-position: right center;
+    grid-auto-flow: column;
+    justify-content: space-between;
+
+    .text-component {
+      justify-items: start;
+    }
   }
 }

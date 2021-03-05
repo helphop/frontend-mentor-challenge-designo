@@ -3,8 +3,23 @@
 // ++++++++++++++++++++
 
 .wide-card {
+  background-image: url(../images/shared/desktop/bg-pattern-call-to-action.svg);
+  background-position: right center;
+  border-radius: var(--radius);
+  padding: 4.5rem 6rem;
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
+  align-items: center;
 
+  .text-component {
+    --text-vspace-multiplier: 1.2; //controls vertical spacing of text
+  }
+
+  &__title {
+    max-width: 15ch;
+  }
+  &__text {
+    max-width: 45ch;
+  }
 }

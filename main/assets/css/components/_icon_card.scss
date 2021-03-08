@@ -18,19 +18,8 @@
   display: grid;
   gap: var(--space-lg);
 
-  @include breakpoint(sm) {
-    grid-auto-flow: column;
-    text-align: left;
-    align-items: center;
-  }
-
-  @include breakpoint(md) {
-    text-align: center;
-    grid-auto-flow: row;
-  }
-
   .text-component {
-    --text-vspace-multiplier: 2; //controls vertical rhythm
+    --text-vspace-multiplier: 5.5; //controls vertical rhythm
   }
 
   &__icon {
@@ -41,6 +30,25 @@
 
   &__title {
     text-transform: uppercase;
+  }
+
+  @include breakpoint(sm) {
+    grid-auto-flow: column;
+    text-align: left;
+    align-items: center;
+
+    .text-component {
+      --text-vspace-multiplier: 1.8; //controls vertical rhythm
+    }
+  }
+
+  @include breakpoint(md) {
+    text-align: center;
+    grid-auto-flow: row;
+  }
+
+  .text-component {
+    --text-vspace-multiplier: 6; //controls vertical rhythm
   }
 }
 

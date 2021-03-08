@@ -14,8 +14,7 @@
   --space-xxl: calc(3.375 * var(--space-unit));
   --space-xxxl: calc(5.063 * var(--space-unit));
   --space-xxxxl: calc(7.59 * var(--space-unit));
-  // --component-padding: var(--space-md);
-  --component-padding: 5vw;
+  --component-padding: calc(10px + var(--space-md));
 }
 
 @include breakpoint(sm) {
@@ -36,19 +35,25 @@
     --space-xxl: calc(4.236 * var(--space-unit));
     --space-xxxl: calc(6.854 * var(--space-unit));
     --space-xxxxl: calc(11.08 * var(--space-unit));
-    // --component-padding: var(--space-xl);
+    --component-padding: var(--space-lg);
   }
 }
 
 @include breakpoint(md) {
   :root, * {
-    // --component-padding: var(--space-xxl);
-    --component-padding: 9vw;
+    --component-padding: var(--space-xxl);
   }
 }
 
 @include breakpoint(lg) {
   :root, * {
-    // --component-padding: var(--space-xxxl);
+    --component-padding: var(--space-xxxl);
+
+  }
+}
+
+@include breakpoint(xl) {
+  :root, * {
+    --component-padding: 0
   }
 }

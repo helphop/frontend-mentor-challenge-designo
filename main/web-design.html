@@ -11,13 +11,13 @@
     <title>Frontend Mentor | Designo Agency Website Challenge</title>
   </head>
   <body>
-    <div class="container-outer | margin-auto">
+    <div class="web-design | container-outer | margin-auto">
       <img class="container-outer__img container-outer__img--1" src="assets/images/shared/desktop/bg-pattern-leaf.svg"
         alt="white leaf shape">
       <section class="navigation fixed">
         <div class="container">
           <nav class="nav fixed" role="navigation" aria-label="Main">
-            <div class="nav__logo"><img class="nav__logo" src="./assets/images/shared/desktop/logo-dark.png" alt="designo logo"></div>
+            <div class="nav__logo"><img src="./assets/images/shared/desktop/logo-dark.png" alt="designo logo"></div>
             <div class="nav__icon nav__icon--open" aria-label="Open menu" aria-hidden="true"
               aria-controls="header-nav-list"><img src="./assets/images/shared/mobile/icon-hamburger.svg" alt="menu icon">
             </div>
@@ -35,7 +35,7 @@
         <div class="container">
           <div class="wide-card | bg-primary">
             <h1>Web design</h1>
-            <p>We build websites that serve as powerful marketing tools and bring memorable brand experiences.</p>
+            <p class="text-center text-responsive">We build websites that serve as powerful marketing tools and bring memorable brand experiences.</p>
           </div>
         </div>
       </header>
@@ -116,8 +116,33 @@
           </div>
         </section>
       </main>
-      <img class="container-outer__img container-outer__img--2 rotate-180"src="assets/images/shared/desktop/bg-pattern-leaf.svg" alt="white leaf shape">
+      <section class="design">
+        <div class="container">
+          <div class="image-cards">
 
+              <a class="image-card" href="app-design.html" id="image-card-app">
+                <div class="image-card__body">
+                  <h2 class="image-card__title">App Design</h2>
+                  <div class="image-card__cta">
+                    <p class="image-card__text">View Projects</p>
+                    <img class="cta__icon" src="assets/images/shared/desktop/icon-right-arrow.svg" alt="right chevron">
+                  </div>
+                </div>
+              </a>
+
+              <a class="image-card" href="graphic-design.html" id="image-card-design">
+                <div class="image-card__body">
+                  <h2 class="image-card__title">Graphic Design</h2>
+                  <div class="image-card__cta">
+                    <p class="image-card__text">View Projects</p>
+                    <img class="cta__icon" src="assets/images/shared/desktop/icon-right-arrow.svg" alt="right chevron">
+                  </div>
+                </div>
+              </a>
+
+          </div>
+        </div>
+      </section>
       <footer class="footer bg-black-light">
         <div class="container">
           <nav class="nav">
@@ -152,49 +177,6 @@
         </div>
       </footer>
     </div>
-  Our Company
-  Locations
-  Contact
-
-  Web design
-  We build websites that serve as powerful marketing tools and bring memorable brand experiences.
-
-  Transfer
-  Site for low-cost money transfers and sending money within seconds
-
-  Photon
-  A state-of-the-art music player with high-resolution audio and DSP effects
-
-  Builder
-  Connects users with local contractors based on their location
-
-  Blogr
-  Blogr is a platform for creating an online blog or publication
-
-  Camp
-  Get expert training in coding, data, design, and digital marketing
-
-  App Design
-  View Projects
-
-  Graphic Design
-  View Projects
-
-  Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can help
-  your business grow.
-  Get in touch
-
-  Our company
-  Locations
-  Contact
-
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
-
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
-</body>
+    <script src="assets/js/scripts.js"></script>
+  </body>
 </html>

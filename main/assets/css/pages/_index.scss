@@ -1,3 +1,8 @@
+// +++++++++++++++++
+// ++ INDEX PAGE  ++
+// +++++++++++++++++
+
+
 // ++++++++++++++++++++
 // ++ HEADER SECTION ++
 // ++++++++++++++++++++
@@ -8,6 +13,7 @@ header {
 
   .container {
     width: 100%; //fill full width of screen for mobile sizes
+    background: var(--color-primary);
   }
 
   .hero {
@@ -44,6 +50,7 @@ header {
 
      .container {
       width: var(--container-width); //control the size of the container
+      background: var(--color-white);
      }
 
     .hero {

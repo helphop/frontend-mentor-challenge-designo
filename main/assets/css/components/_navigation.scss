@@ -16,6 +16,8 @@
   &__logo {
     max-width: 12.625rem;
     flex-shrink: 0;
+    display: grid;
+    align-items: bottom;
   }
 
   &__list {

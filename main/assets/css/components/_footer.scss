@@ -3,25 +3,65 @@
 // ++++++++++++++++++++
 
 .footer {
-  --overlap: 4.5rem;
-  padding: calc(2 * var(--overlap)) 0 var(--overlap);
-  margin-top: calc(-1 * var(--overlap));
-  z-index: -1;
-  --nav-height: var(--space-xxl);
-  --logo-height: 27px;
+  --nav-height: 0;
+  --bottom-padding: 4rem;
+  --top-padding: 15.8125rem;
+  --border-bottom: 1px solid #{alpha(var(--color-contrast-slight), 0.2)};
+  --element-spacing: var(--space-xl); //controls the spacing between elements
 
-  .nav {
-    border-bottom: 1px solid var(--color-contrast-slight);
+  padding: var(--top-padding) 0 var(--bottom-padding);
+  margin-top: calc(var(--bottom-padding) - var(--top-padding));
+  z-index: -1;
+
+  .nav__logo__container {
+    width: 100%;
+    text-align: center;
+    border-bottom: var(--border-bottom);
+    padding-bottom: var(--element-spacing);
   }
 
   .contact {
-    margin-top: calc((var(--nav-height) - var(--logo-height))/2); //total nav height - logo height = space above and below logo.
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     color: alpha(var(--color-white), 0.5);
+    text-align: center;
+    display: grid;
+    row-gap: var(--element-spacing);
+    justify-items: center;
 
-    &__social {
-      place-self: end;
+    .text-component {
+       --line-height-multiplier: 0.5; // modify line-height of all text elements
+    }
+
+    &__social > * + * {
+      margin-left: 1rem;
+    }
+  }
+
+
+  @include breakpoint(sm) {
+    --bottom-padding: 5rem;
+    --top-padding: 10.375rem;
+    --element-spacing: var(--space-lg);
+
+   .nav {
+   padding-bottom: var(--element-spacing);
+    border-bottom: var(--border-bottom);
+
+      &__logo__container {
+        width: auto;
+        border: none;
+        padding-bottom: 0;
+      }
+    }
+
+    .contact {
+      padding-top: var(--element-spacing);
+      text-align: left;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: start;
+
+      &__social {
+        place-self: end;
+      }
     }
   }
 }

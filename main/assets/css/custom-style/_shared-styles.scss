@@ -2,10 +2,31 @@
   --radius: 0.9375em; // border radius base size
 }
 
-.container--outer {
+.container-outer {
   max-width: 90rem;
   display: grid; //avoids margin collapsing
   grid-template-columns: 1fr;
+  position: relative;
+  &__img {
+    display: none;
+  }
+
+  @include breakpoint(lg) {
+    &__img {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      --y-position: 17.5%;
+    }
+    &__img--1 {
+      left: 0;
+      top: var(--y-position);
+    }
+    &__img--2 {
+      right: 0;
+      bottom: var(--y-position);
+    }
+  }
 }
 
 .container {

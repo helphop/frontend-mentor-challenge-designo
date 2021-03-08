@@ -35,5 +35,14 @@
 // ++ EXAMPLES SECTION  ++
 // +++++++++++++++++++++++
 
+.examples__cards {
+  display: grid;
+  gap: var(--space-xxl);
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+  }
+}
 
 }

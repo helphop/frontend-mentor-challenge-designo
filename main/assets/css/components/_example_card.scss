@@ -1,3 +1,8 @@
+// +++++++++++++++++++++++
+// ++ EXAMPLE CARD  ++
+// +++++++++++++++++++++++
+
+
 .example-card {
   display: grid;
 
@@ -15,14 +20,46 @@
       max-width: 27ch;
     }
 
+    &__link {
+      background: var(--color-primary-lighter);
+      border-radius: 0 0  var(--radius) var(--radius);
+    }
+
     &__footer {
       text-align: center;
       padding: 32px 0px;
-      background: var(--color-primary-lighter);
       display: grid;
       justify-items: center;
       gap: 1rem;
-      border-radius: 0 0 var(--radius) var(--radius);
+    }
+  }
+
+  @include breakpoint(sm) {
+    grid-template-columns: repeat(2, 1fr);
+
+    .card {
+
+      &__image {
+        border-radius:  var(--radius)  0  0 var(--radius);
+      }
+
+      &__link {
+        border-radius: 0 var(--radius) var(--radius) 0;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    grid-template-columns: 1fr;
+
+    .card {
+      &__image {
+        border-radius:  var(--radius)   var(--radius) 0 0;
+      }
+
+      &__link {
+        border-radius: 0 0 var(--radius) var(--radius) ;
+      }
     }
   }
 }

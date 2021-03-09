@@ -31,7 +31,8 @@
       transition: all 0.4s;
     }
 
-    &__link:hover {
+    &__link:hover,
+    &__link:active {
       --bg: var(--color-primary);
       --fg: var(--color-white);
     }

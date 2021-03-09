@@ -41,19 +41,13 @@
 
 @include breakpoint(md) {
   :root, * {
-    --component-padding: var(--space-xxl);
+    --component-padding: var(--space-sm);
   }
 }
 
 @include breakpoint(lg) {
   :root, * {
-    --component-padding: var(--space-xxxl);
-
+    --component-padding: 0;
   }
 }
 
-@include breakpoint(xl) {
-  :root, * {
-    --component-padding: 0
-  }
-}

@@ -11,21 +11,29 @@
   .card {
 
     &__title {
-      color: var(--color-primary);
+      color: var(--fg, var(--color-primary));
       text-transform: uppercase;
     }
 
     &__text {
       max-width: 27ch;
+      color: var(--fg, inherit);
     }
 
     &__link {
-      background: var(--color-primary-lighter);
+      text-align: center;
+      background: var(--bg, var(--color-primary-lighter));
+      padding: 2.25rem 0px;
       display: grid;
       place-items: center;
       align-content: center;
       gap: 1rem;
-      padding: 2.25rem 0px;
+      transition: all 0.4s;
+    }
+
+    &__link:hover {
+      --bg: var(--color-primary);
+      --fg: var(--color-white);
     }
   }
 

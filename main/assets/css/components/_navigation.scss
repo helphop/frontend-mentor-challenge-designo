@@ -44,7 +44,8 @@
 .navigation.fixed {
   position: fixed;
   min-width: 100%;
-  z-index: var(--zindex-header); //keep menu on top of all other content
+  z-index: var(--zindex-fixed-element); //keep menu on top of all other content
+
   @include breakpoint(sm) {
     position: static;
   }
@@ -60,7 +61,7 @@
     visibility: hidden;
     opacity: 0;
     width: 100%;
-     transition: all .4s ease-in-out;
+     transition: all .4s ease-in-out;;
     a {
       font-size: 1.5rem;
     }

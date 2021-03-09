@@ -27,7 +27,7 @@
   }
 
   &__body {
-     z-index: var(--zindex-overlay);
+     z-index: var(--zindex-popover);
   }
 
   &:hover::before {

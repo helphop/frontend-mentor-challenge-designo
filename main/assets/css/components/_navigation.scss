@@ -2,7 +2,7 @@
   --nav-height: calc(2.5 * var(--space-xl));
 }
 
-.navigation {
+.nav-bar {
   background: var(--bg, var(--color-white));
 }
 
@@ -41,10 +41,10 @@
 // ++ FIXED NAVIGATION ++
 // ++++++++++++++++++++++
 
-.navigation.fixed {
+.nav-bar.fixed {
   position: fixed;
   min-width: 100%;
-  z-index: var(--zindex-fixed-element); //keep menu on top of all other content
+  z-index: var(--zindex-fixed-element); //keep nav-bar and nav on top of all other content
 
   @include breakpoint(sm) {
     position: static;
@@ -96,8 +96,6 @@
     opacity: 1;
     }
   }
-
-
 }
 
   // ++++++++++++++++++

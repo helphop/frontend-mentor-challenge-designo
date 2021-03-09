@@ -1,4 +1,4 @@
-const nav = document.querySelector(".navigation .nav")
+const nav = document.querySelector(".nav-bar .nav")
 const openTrigger = nav.querySelector(".nav__icon--open")
 const closeTrigger = nav.querySelector(".nav__icon--close")
 const navList = document.querySelector(".nav__list")

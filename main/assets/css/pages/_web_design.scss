@@ -54,16 +54,7 @@
 // ++ DESIGN SECTION  ++
 // ++++++++++++++++++++++++++
 
-  .image-cards {
-    grid-template-areas:
-      'app'
-      'design';
 
-    @include breakpoint(md) {
-      grid-template-areas:
-        'app design';
-    }
-  }
 
 
 }

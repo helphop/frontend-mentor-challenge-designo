@@ -7,24 +7,25 @@
   display: grid; //avoids margin collapsing
   grid-template-columns: 1fr;
   position: relative;
+
   &__img {
     display: none;
   }
 
   @include breakpoint(lg) {
+
     &__img {
       display: block;
       position: absolute;
       z-index: -1;
-      --y-position: 17.5%;
     }
     &__img--1 {
       left: 0;
-      top: var(--y-position);
+      top: var(--img-1-top, 15%);
     }
     &__img--2 {
       right: 0;
-      bottom: var(--y-position);
+      bottom: var(--img-2-bottom, 17.5%);
     }
   }
 }
@@ -34,7 +35,15 @@
 }
 
 
+// ++++++++++++++++++++++++++
+// ++ MAIN STYLES ++
+// ++++++++++++++++++++++++++
 
+main {
+  display: grid;
+  margin-top: var(--space-xxxl);
+  gap: var(--space-xxxl);
+}
 
 
 

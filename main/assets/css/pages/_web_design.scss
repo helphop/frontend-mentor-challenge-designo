@@ -5,6 +5,10 @@
 
 .web-design {
 
+  .container-outer__img {
+    --img-1-top: 8%;
+  }
+
 
 // +++++++++++++++++++++
 // ++ HEADER SECTION  ++
@@ -35,14 +39,29 @@
 // ++ EXAMPLES SECTION  ++
 // +++++++++++++++++++++++
 
-.examples__cards {
-  display: grid;
-  gap: var(--space-xxl);
+  .examples__cards {
+    display: grid;
+    gap: var(--space-xxl);
 
-  @include breakpoint(md) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.875rem;
+    @include breakpoint(md) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.875rem;
+    }
   }
-}
+
+// ++++++++++++++++++++++++++
+// ++ DESIGN SECTION  ++
+// ++++++++++++++++++++++++++
+
+  .image-cards {
+
+    @include breakpoint(md) {
+      grid-template-areas:
+        'app design';
+    }
+
+  }
+
+
 
 }

@@ -1,6 +1,95 @@
-// ++++++++++++++++++++
-// ++ IMAGE CARDS ++
-// ++++++++++++++++++++
+// ++++++++++++++++++++++++
+// ++ IMAGE CARDS LAYOUT ++
+// ++++++++++++++++++++++++
+
+.image-cards {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 15.625rem;
+    grid-template-areas:
+      'first'
+      'second'
+      'third';
+    gap: 1.5rem;
+
+   &--two-cards {
+    grid-template-areas:
+      'first'
+      'second';
+   }
+
+    @include breakpoint(sm) {
+      grid-auto-rows: 12.5rem;
+    }
+
+    @include breakpoint(md) {
+      grid-auto-rows: 19.25rem;
+      grid-template-areas:
+        'first second'
+        'first third';
+      gap: 1.875rem;
+
+      &--two-cards {
+        grid-template-areas:
+        'first second';
+      }
+    }
+
+    &>:nth-child(1) {
+      grid-area: first;
+    }
+
+    &>:nth-child(2) {
+      grid-area: second;
+    }
+
+    &>:nth-child(3) {
+      grid-area: third;
+    }
+
+
+    #image-card-web {
+      --card-bg-image: url(../images/home/desktop/image-web-design-small.jpg);
+      background-position: right -140px bottom;
+      background-size: 280%;
+
+      @include breakpoint(sm) {
+        background-position: left bottom;
+        background-size: cover;
+      }
+
+      @include breakpoint(md) {
+        --card-bg-image: url(../images/home/desktop/image-web-design-large.jpg);
+        background-position: center center;
+      }
+    }
+
+    #image-card-app {
+      --card-bg-image: url(../images/home/desktop/image-app-design.jpg);
+      background-position: right -100px center;
+      background-size: 180%;
+
+      @include breakpoint(sm) {
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+
+    #image-card-graphic {
+      --card-bg-image: url(../images/home/desktop/image-graphic-design.jpg);
+      background-position: left top;
+      background-size: 150%;
+
+      @include breakpoint(sm) {
+        background-position: left top;
+        background-size: cover;
+      }
+    }
+  }
+
+// ++++++++++++++++++++++++
+// ++ IMAGE CARDS DESIGN ++
+// ++++++++++++++++++++++++
 
 .image-card,
 .image-card::before {

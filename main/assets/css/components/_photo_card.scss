@@ -5,7 +5,7 @@
 
   &__content {
     text-align: center;
-    padding: 4rem 3.625rem;
+    padding: 80px 24px;
     display: grid;
     gap: 14px;
     place-content: center;
@@ -20,6 +20,10 @@
   @include breakpoint(sm) {
     --bg-position-x: left -8rem;
     --bg-position-y: bottom 5rem;
+
+    &__content {
+      padding: 4rem 3.625rem;
+    }
   }
 
   @include breakpoint(md) {
@@ -33,7 +37,7 @@
     }
 
     &__photo {
-      max-width: 476px;
+      width: 476px;
     }
 
     &__photo--right {

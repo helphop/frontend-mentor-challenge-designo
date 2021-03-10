@@ -2,10 +2,11 @@
   border-radius: var(--radius);
   overflow: hidden;
   display: grid;
-  grid-auto-flow: column;
+
 
   &__content {
-    padding: 8.4375rem 5.625rem;
+    text-align: center;
+    padding: 4rem 3.625rem;
     display: grid;
     gap: 14px;
     place-content: center;
@@ -14,7 +15,23 @@
   &__photo img {
     object-fit: cover;
     height: 100%;
-    max-width: 476px;
+    width: 100%;
+  }
+  @include breakpoint(md) {
+
+    grid-auto-flow: column;
+
+    &__content {
+      padding: 8.4375rem 5.625rem;
+    }
+
+    &__photo {
+      max-width: 476px;
+    }
+
+    &__photo--right {
+      order: 1;
+    }
   }
 }
 

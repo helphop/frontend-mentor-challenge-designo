@@ -20,11 +20,11 @@
       z-index: -1;
     }
     &__img--1 {
-      left: 0;
+      left: var(--img-1-left, 0);
       top: var(--img-1-top, 15%);
     }
     &__img--2 {
-      right: 0;
+      right: var(--img-2-right, 0);
       bottom: var(--img-2-bottom, 17.5%);
     }
   }

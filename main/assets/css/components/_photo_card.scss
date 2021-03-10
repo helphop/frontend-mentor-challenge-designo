@@ -3,7 +3,6 @@
   overflow: hidden;
   display: grid;
 
-
   &__content {
     text-align: center;
     padding: 4rem 3.625rem;
@@ -17,7 +16,15 @@
     height: 100%;
     width: 100%;
   }
+
+  @include breakpoint(sm) {
+    --bg-position-x: left -8rem;
+    --bg-position-y: bottom 5rem;
+  }
+
   @include breakpoint(md) {
+    --bg-position-x: left;
+    --bg-position-y: bottom;
 
     grid-auto-flow: column;
 

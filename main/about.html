@@ -33,8 +33,8 @@
 
       <header class="header">
         <div class="container">
-          <div class="photo-card">
-            <div class="photo-card__content |  text-component | text-left@md bg-primary">
+          <div class="photo-card photo-card--primary | bg-circle bg-circle--left-bottom">
+            <div class="photo-card__content |  text-component | text-left@md">
               <h1>About us</h1>
               <p>Founded in 2010, we are a creative agency that produces lasting results for our clients.
               We’ve partnered with many startups, corporations, and nonprofits alike to craft designs
@@ -42,7 +42,11 @@
               digital experiences that connect with our clients' audiences.</p>
             </div>
             <div class="photo-card__photo">
-              <img src="assets/images/about/desktop/image-about-hero.jpg" alt="top view of 6 people sitting at table">
+              <img
+              sizes="(min-width: 1024px) 476px, (min-width: 768px) 689px, 100vw"
+              srcset="assets/images/about/desktop/image-about-hero.jpg 476w, assets/images/about/tablet/image-about-hero.jpg 689w"
+              src="assets/images/about/mobile/image-about-hero.jpg" alt="top view of 6 people sitting at table"
+              >
             </div>
           </div>
         </div>

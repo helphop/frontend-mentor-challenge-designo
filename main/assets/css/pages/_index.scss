@@ -12,8 +12,7 @@ header {
   color: var(--color-white);
 
   .container {
-    width: 100%; //fill full width of screen for mobile sizes
-    background: var(--color-primary);
+    background: var(--color-primary); //so it appears the hero fills 100% of width
   }
 
   .hero {
@@ -49,7 +48,6 @@ header {
     margin-top: initial; //remove margin used for menu when menu was fixed;
 
      .container {
-      width: var(--container-width); //control the size of the container
       background: var(--color-white);
      }
 
@@ -77,8 +75,6 @@ header {
 
       background-position: right top;
       background-size: 55%;
-
-      border-radius: var(--radius);
       padding: var(--hero-padding-y) var(--hero-padding-x);
 
       &__article {

@@ -34,6 +34,12 @@
   max-width: 1111px;
 }
 
+.container--width-100\@mobile {
+  width: 100%;
+  @include breakpoint(sm) {
+    width: var(--container-width);
+  }
+}
 
 // ++++++++++++++++++++++++++
 // ++ MAIN STYLES ++

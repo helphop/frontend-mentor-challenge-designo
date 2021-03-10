@@ -18,6 +18,7 @@
 
   .bg-circle {
     background-image:  url(../images/about/desktop/bg-pattern-hero-about-desktop.svg);
+    background-repeat: var(--bg-repeat, no-repeat);
     background-position: var(--bg-position-x) var(--bg-position-y);
   }
 

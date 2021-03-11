@@ -23,9 +23,28 @@
   }
 
   &__icon {
+    position: relative;
+    --deg: 0deg;
+  }
+
+  &__icon::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
     background: url(../images/home/desktop/bg-pattern-hero-home.svg) no-repeat;
     background-size: contain;
     background-position: center;
+    transform: rotate(var(--deg));
+  }
+
+  &__icon--90 {
+    --deg: -90deg;
+  }
+
+  &__icon--180 {
+    --deg: 180deg;
   }
 
   &__title {

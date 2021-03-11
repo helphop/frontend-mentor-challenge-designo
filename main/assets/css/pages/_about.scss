@@ -5,4 +5,23 @@
     --img-2-right: -30%;
     --img-2-bottom: 33%;
   }
+
+  .header {
+    .photo-card__content {
+      --bg-position-x: right;
+      --bg-position-y: top -200px;
+      --bg-size: 90%;
+
+      @include breakpoint(sm) {
+        --bg-position-x: left -8rem;
+        --bg-position-y: bottom 5rem;
+        --bg-size: cover;
+      }
+
+      @include breakpoint(md) {
+        --bg-position-x: left;
+        --bg-position-y: bottom;
+      }
+    }
+  }
 }

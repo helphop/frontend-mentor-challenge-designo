@@ -6,7 +6,7 @@
     text-align: center;
     padding: 80px 24px;
     display: grid;
-    gap: 14px;
+    gap: 28px;
     place-content: center;
   }
 
@@ -18,8 +18,7 @@
 
   @include breakpoint(sm) {
      border-radius: var(--radius);
-    --bg-position-x: left -8rem;
-    --bg-position-y: bottom 5rem;
+
 
     &__content {
       padding: 4rem 3.625rem;
@@ -27,9 +26,6 @@
   }
 
   @include breakpoint(md) {
-    --bg-position-x: left;
-    --bg-position-y: bottom;
-
     grid-auto-flow: column;
 
     &__content {
@@ -44,12 +40,4 @@
       order: 1;
     }
   }
-}
-
-.photo-card--primary {
-  background-color: var(--color-primary);
-}
-
-.photo-card--primary-light {
-   background-color: var(var(--color-primary-lighter));
 }

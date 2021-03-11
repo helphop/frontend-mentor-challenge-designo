@@ -24,4 +24,11 @@
       }
     }
   }
+
+  .icon-card {
+    @include breakpoint(sm) {
+      grid-auto-flow: row;
+      text-align: center;
+    }
+  }
 }

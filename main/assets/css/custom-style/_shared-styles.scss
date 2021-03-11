@@ -7,6 +7,7 @@
   display: grid; //avoids margin collapsing
   grid-template-columns: 1fr;
   position: relative;
+  overflow: hidden;
 
   &__img {
     display: none;

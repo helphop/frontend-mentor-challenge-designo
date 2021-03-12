@@ -1,0 +1,10 @@
+.contact {
+
+  .hero {
+    --bg-image: url(../images/contact/desktop/bg-pattern-hero-desktop.svg);
+    background-position: left bottom;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

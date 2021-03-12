@@ -60,3 +60,10 @@
     .bg-circle--left-bottom {
     --bg-position-y: bottom;
   }
+
+    .bg-three-circles {
+    background-image:  url(../images/shared/desktop/bg-pattern-three-circles.svg);
+    background-repeat: var(--bg-repeat);
+    background-position: var(--bg-position-x) var(--bg-position-y);
+    background-size: var(--bg-size);
+  }

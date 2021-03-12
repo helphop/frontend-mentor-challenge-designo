@@ -14,12 +14,14 @@
   }
 
 .icon-card {
+  --header-text-gap: 5.5;
   text-align: center;
   display: grid;
-  gap: var(--space-lg);
+  align-items: center;
+  gap: 3.4375rem;
 
   .text-component {
-    --text-vspace-multiplier: 5.5; //controls vertical rhythm
+    --text-vspace-multiplier: var(--header-text-gap); //controls vertical rhythm
   }
 
   &__icon {
@@ -51,23 +53,32 @@
     text-transform: uppercase;
   }
 
-  @include breakpoint(sm) {
-    grid-auto-flow: column;
-    text-align: left;
-    align-items: center;
+}
 
-    .text-component {
-      --text-vspace-multiplier: 1.8; //controls vertical rhythm
+
+ //display content horizontally for tablet screen sizes
+  @include breakpoint(sm) {
+  .icon-card.icon-card--horizontal\@sm {
+      grid-auto-flow: column;
+      text-align: left;
+
+      .text-component {
+        --text-vspace-multiplier: 3; //controls vertical rhythm
+      }
     }
   }
 
-  @include breakpoint(md) {
+
+ .icon-card,
+ .icon-card.icon-card--horizontal\@sm {
+   @include breakpoint(md) {
     text-align: center;
     grid-auto-flow: row;
   }
 
   .text-component {
-    --text-vspace-multiplier: 6; //controls vertical rhythm
+    --text-vspace-multiplier: var(--header-text-gap);
   }
-}
+ }
+
 

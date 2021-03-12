@@ -58,12 +58,4 @@
     }
   }
 
- //remove this after have create modulator class for .icon-card
- //so will show card in row format when class exists for breakpoint or devise
-  .icon-card {
-    @include breakpoint(sm) {
-      grid-auto-flow: row;
-      text-align: center;
-    }
-  }
 }

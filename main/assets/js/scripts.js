@@ -328,8 +328,11 @@ const navList = document.querySelector(".nav__list")
 let isOpen = false;
 
 nav.addEventListener('click', (e) => {
-  toggleMenu()
-  setMenuState();
+  //only open menu if on mobile sized device
+  if (onMobile()) {
+    toggleMenu()
+    setMenuState();
+  }
 })
 
 // listen for key events
@@ -351,6 +354,8 @@ window.addEventListener('resize', () =>  setTimeout( function() {
     setMenuState()
   }
 }, 500));
+
+const onMobile = () => window.innerWidth < 768;
 
 const toggleMenu = () => nav.classList.toggle("open")
 

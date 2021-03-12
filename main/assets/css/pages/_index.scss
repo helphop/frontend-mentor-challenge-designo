@@ -16,8 +16,7 @@ header {
   }
 
   .hero {
-    background: url(../images/home/desktop/bg-pattern-hero-home.svg) no-repeat, var(--color-primary);
-    background-position: left top 5.5rem;
+    background-position: left top 6.5rem;
     background-size: 180%;
     overflow: hidden;
     padding: 5rem 0 27rem;
@@ -27,9 +26,11 @@ header {
       display: grid;
       justify-items: center;
       --text-vspace-multiplier: 2.5; //controls the vertical rhythm
+
       h1 {
         max-width: 20ch;
       }
+
       p {
         max-width: 35ch;
       }
@@ -59,6 +60,7 @@ header {
 
       &__article {
          --text-vspace-multiplier: 1.8; //controls the vertical rhythm
+
         p {
           max-width: 46ch;
         }

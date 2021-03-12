@@ -26,6 +26,40 @@
     }
   }
 
+
+  .photo-card__content {
+      --bg-position-x: left;
+      --bg-position-y: bottom;
+
+    @include breakpoint(sm) {
+      --bg-position-x: right;
+      --bg-position-y: bottom 10px;
+    }
+
+  }
+
+  .talent {
+    .photo-card__content {
+      @include breakpoint(md) {
+        --bg-position-x: left -150px;
+        --bg-position-y: bottom;
+      }
+    }
+  }
+
+
+  .real-deal {
+    .photo-card__content {
+
+      @include breakpoint(md) {
+        --bg-position-x: left;
+        --bg-position-y: bottom;
+      }
+    }
+  }
+
+ //remove this after have create modulator class for .icon-card
+ //so will show card in row format when class exists for breakpoint or devise
   .icon-card {
     @include breakpoint(sm) {
       grid-auto-flow: row;

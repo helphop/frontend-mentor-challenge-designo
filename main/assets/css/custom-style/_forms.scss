@@ -14,11 +14,13 @@
   @include fontSmooth;
   transition: all 0.2s ease;
   width: 100%;
-  padding: 1rem;
+  padding: var(--form-control-padding-y) var(--form-control-padding-x);
+  resize: none;
 
   &::placeholder {
     opacity: 1;
     color: var(--color-contrast-low);
+    text-transform: capitalize;
   }
 
   &:focus {

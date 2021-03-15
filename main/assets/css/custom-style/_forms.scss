@@ -1,9 +1,15 @@
 :root {
   --form-control-font-size: 1em;
-  --form-control-padding-x: var(--space-xs);
-  --form-control-padding-y: var(--space-xxs);
+  --form-control-padding-x: 1rem;
+  --form-control-padding-y: 1rem;
   --form-control-radius: 0em;
 }
+
+//wrapper for form fields so can position error message relative
+.form-control-group {
+  position: relative;
+}
+
 
 .form-control {
   color: var(--color-white);
@@ -16,6 +22,7 @@
   width: 100%;
   padding: var(--form-control-padding-y) var(--form-control-padding-x);
   resize: none;
+  transition: all 0.2s;
 
   &::placeholder {
     opacity: 1;
@@ -45,3 +52,13 @@
 .form-label {
   font-size: var(--text-sm);
 }
+
+.form-field-error {
+  display: flex;
+  align-items:center;
+  font-size: 0.75em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+

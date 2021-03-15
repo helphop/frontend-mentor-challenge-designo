@@ -42,11 +42,26 @@
             </div>
 
               <form action="createContact.html"  class="hero__form" method="post">
+                <div class="form-control-group">
+                  <input type="text" class="form-control" placeholder="Name">
+                </div>
 
-                <input type="text" class="form-control" placeholder="Name">
-                <input type="email" class="form-control" placeholder="Email address">
-                <input type="text" class="form-control" placeholder="Phone">
+                <div class="form-control-group">
+                  <input type="email" class="form-control" placeholder="Email address">
+                </div>
+
+                <div class="form-control-group">
+                  <input type="text" class="form-control" placeholder="Phone">
+                </div>
+
+                <div class="form-control-group">
                 <textarea type="textarea" class="form-control" placeholder="Your message" ols="30" rows="4"></textarea>
+                  <div class="form-field-error">
+                    <p class="font-italic margin-right-xs">Can't be empty</p>
+                    <img src="assets/images/contact/desktop/icon-error.svg" alt="exclamation point">
+                  </div>
+                </div>
+
                 <div class="form-action-group">
                  <button type="submit" class="btn btn--subtle">Submit</button>
                 </div>

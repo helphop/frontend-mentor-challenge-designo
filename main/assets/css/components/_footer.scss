@@ -65,3 +65,8 @@
     }
   }
 }
+
+.footer.footer-no-top-margin {
+  margin-top: var(--space-xxxl);
+  --top-padding: var(--bottom-padding);
+}

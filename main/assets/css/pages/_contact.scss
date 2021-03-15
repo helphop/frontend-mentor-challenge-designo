@@ -13,23 +13,8 @@
       gap: 1.5625rem;
     }
 
-    .form-control {
-      padding: 0 0 var(--form-control-padding-y) var(--form-control-padding-x);
-      transition: all 0.4s;
-
-      &:hover {
-        border-bottom: 2px solid var(--color-white);
-        margin-bottom: -1px; //prevents content from shifting down
-      }
-    }
-
     .form-action-group {
       justify-self: end;
     }
-
-
-
   }
-
-
 }

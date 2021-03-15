@@ -20,9 +20,15 @@
   @include fontSmooth;
   transition: all 0.2s ease;
   width: 100%;
-  padding: var(--form-control-padding-y) var(--form-control-padding-x);
+  padding: 0 0 var(--form-control-padding-y) var(--form-control-padding-x);
   resize: none;
   transition: all 0.2s;
+
+  &:hover {
+    border-bottom: 2px solid var(--color-white);
+    margin-bottom: -1px; //prevents content from shifting down
+  }
+
 
   &::placeholder {
     opacity: 1;

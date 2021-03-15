@@ -1,0 +1,43 @@
+.contact {
+
+  .hero {
+    --bg-image: url(../images/contact/desktop/bg-pattern-hero-desktop.svg);
+    background-position: left bottom;
+    display: grid;
+    align-items: center;
+    row-gap: 3rem;
+
+    &__article {
+      justify-items: start;
+    }
+
+    p {
+      max-width: 100%;
+    }
+
+    @include breakpoint(sm) {
+      background-position: left -6.25rem top -4.375rem;
+      padding: 4.375rem 3.625rem;
+    }
+
+    @include breakpoint(md) {
+      background-position: left bottom;
+      --hero-padding-x: 6rem;
+      padding: 3.4375rem var(--hero-padding-x);
+      grid-template-columns: calc(38rem - var(--hero-padding-x)) 1fr;
+
+      p {
+        max-width: 47ch;
+      }
+    }
+
+    &__form {
+      display: grid;
+      gap: 1.5625rem;
+    }
+
+    .form-action-group {
+      justify-self: end;
+    }
+  }
+}

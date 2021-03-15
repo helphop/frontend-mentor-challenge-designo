@@ -2,7 +2,8 @@
  --bg-position-x: left;
  --bg-position-y: center;
  --bg-repeat: no-repeat;
- --bg-size: auto;
+ --bg-size: 100%;
+ --bg-image: url(../images/about/desktop/bg-pattern-hero-about-desktop.svg);
 }
 
   .bg-primary {
@@ -19,7 +20,7 @@
   }
 
   .bg-circle {
-    background-image:  url(../images/about/desktop/bg-pattern-hero-about-desktop.svg);
+    background-image:  var(--bg-image);
     background-repeat: var(--bg-repeat);
     background-position: var(--bg-position-x) var(--bg-position-y);
     background-size: var(--bg-size);

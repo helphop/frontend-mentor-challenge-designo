@@ -1,3 +1,8 @@
+// +++++++++++++++++
+// ++ ABOUT PAGE  ++
+// +++++++++++++++++
+
+
 .about {
 
   .container-outer__img {
@@ -5,6 +10,10 @@
     --img-2-right: -30%;
     --img-2-bottom: 33%;
   }
+
+  // ++++++++++++++++++++
+  // ++ HEADER SECTION ++
+  // ++++++++++++++++++++
 
   .header {
 
@@ -28,6 +37,9 @@
     }
   }
 
+  // ++++++++++++++++++
+  // ++ MAIN SECTION ++
+  // ++++++++++++++++++
 
   .photo-card__content {
       --bg-position-x: left;

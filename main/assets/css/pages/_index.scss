@@ -21,6 +21,7 @@ header {
     overflow: hidden;
     padding: 5rem 0 27rem;
     position: relative;
+    z-index: 0;
 
     &__article {
       display: grid;
@@ -42,6 +43,7 @@ header {
       right: 50%;
       transform: translateX(50%);
       width: 39rem; //set the image width since it is the same size on all screens
+      z-index: -1;
     }
   }
 

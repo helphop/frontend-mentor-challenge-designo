@@ -10,10 +10,12 @@
 
     .photo-card__content {
       --bg-position-x: right;
-      --bg-position-y: top -200px;
-      --bg-size: 90%;
+      --bg-position-y: top -150px;
+      --bg-size: 220%;
+      --bg-image: url(../images/about/mobile/bg-pattern-hero-about-mobile.svg);
 
       @include breakpoint(sm) {
+        --bg-image: url(../images/about/desktop/bg-pattern-hero-about-desktop.svg);
         --bg-position-x: left -8rem;
         --bg-position-y: bottom 5rem;
         --bg-size: cover;
@@ -38,6 +40,11 @@
 
   }
 
+  .talent .photo-card__content,
+  .real-deal .photo-card__content {
+    --bg-image: url(../images/shared/desktop/bg-pattern-three-circles.svg);
+  }
+
   .talent {
     .photo-card__content {
       @include breakpoint(md) {
@@ -47,10 +54,8 @@
     }
   }
 
-
   .real-deal {
     .photo-card__content {
-
       @include breakpoint(md) {
         --bg-position-x: left;
         --bg-position-y: bottom;

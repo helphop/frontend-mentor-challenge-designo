@@ -9,7 +9,6 @@
 
 header {
 
-
   .hero {
     background-position: left top 6.5rem;
     background-size: 180%;
@@ -43,12 +42,6 @@ header {
   }
 
   @include breakpoint(sm) {
-    margin-top: initial; //remove margin used for menu when menu was fixed;
-
-     .container {
-      background: var(--color-white);
-     }
-
     .hero {
       background-position: right -7.5rem top 6.25rem;
       background-size: 90%;

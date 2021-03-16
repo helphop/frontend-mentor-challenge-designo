@@ -39,6 +39,7 @@
     background-size: contain;
     background-position: center;
     transform: rotate(var(--deg));
+    z-index: -1;
   }
 
   &__icon--90 {

@@ -50,7 +50,7 @@
 // ++ HEADER ++
 // ++++++++++++
 
-header {
+.header {
   margin-top: var(--nav-height); //move content down for fixed menu
   color: var(--color-white);
 
@@ -67,26 +67,14 @@ header {
   }
 }
 
-
-// +++++++++++
-// ++ HERO  ++
-// +++++++++++
-
-
-
-
-
-
-
-
 // ++++++++++++++++++++++++++
 // ++ MAIN STYLES ++
 // ++++++++++++++++++++++++++
 
 main {
   display: grid;
-  margin-top: var(--space-xxxl);
-  gap: var(--space-xxxl);
+  margin-top: var(--space-xxxl); //to space things out evenly
+  gap: var(--space-xxxl); //to space things out evenly
 }
 
 

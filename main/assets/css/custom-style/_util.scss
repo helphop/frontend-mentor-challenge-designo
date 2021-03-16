@@ -25,3 +25,15 @@
     background-position: var(--bg-position-x) var(--bg-position-y);
     background-size: var(--bg-size);
   }
+
+  .flow-content > * + * {
+    margin-top: 1.65rem;
+
+    @include breakpoint(sm) {
+      margin-top: 2rem;
+    }
+
+    @include breakpoint(md) {
+      margin-top: 2.125rem;
+    }
+  }

@@ -14,6 +14,8 @@
   @include fontSmooth;
   box-shadow: var(--shadow-xs);
   transition: all 0.2s ease;
+  width: 9.5rem; //buttons are same width no matter the content
+  height: 3.5rem; //buttons are same height no matter the content
 
   &:hover {
     box-shadow: var(--shadow-sm);

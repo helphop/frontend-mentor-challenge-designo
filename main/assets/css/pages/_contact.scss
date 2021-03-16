@@ -9,13 +9,12 @@
     --img-2-bottom: 10%;
   }
 
-  // +++++++++++
-  // ++ HERO  ++
-  // +++++++++++
-
   .hero {
     --bg-image: url(../images/contact/mobile/bg-pattern-hero-contact-mobile.svg);
-    background-position: left -2rem top;
+    --bg-position-x: left -50px;
+    --bg-position-y: top;
+    --bg-size: 200%;
+
     padding: 4.5rem 1.5rem;
     text-align: center;
     display: grid;
@@ -34,7 +33,10 @@
 
     @include breakpoint(sm) {
       --bg-image: url(../images/contact/desktop/bg-pattern-hero-desktop.svg);
-      background-position: left -6.25rem top -4.375rem;
+      --bg-position-x: left -100px;
+      --bg-position-y: top -50px;
+      --bg-size: auto;
+
       padding: 4.375rem 3.625rem;
       text-align: left;
 
@@ -53,10 +55,13 @@
     }
 
     @include breakpoint(md) {
-      background-position: left bottom;
+      --bg-position-x: left;
+      --bg-position-y: bottom;
       --hero-padding-x: 6rem;
+      --bg-image-radius: 40rem;
+
       padding: 3.4375rem var(--hero-padding-x);
-      grid-template-columns: calc(38rem - var(--hero-padding-x)) 1fr;
+      grid-template-columns: calc(var(--bg-image-radius) - var(--hero-padding-x)) 1fr;
 
       p {
         max-width: 47ch;

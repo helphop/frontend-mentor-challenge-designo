@@ -2,16 +2,13 @@
 // ++ INDEX PAGE  ++
 // +++++++++++++++++
 
-
-// ++++++++++++++++++++
-// ++ HEADER SECTION ++
-// ++++++++++++++++++++
-
 header {
 
   .hero {
-    background-position: left top 6.5rem;
-    background-size: 180%;
+    --bg-position-x: left;
+    --bg-position-y: top 6.5rem;
+    --bg-size: 150%;
+
     overflow: hidden;
     padding: 5rem 0 27rem;
     position: relative;
@@ -42,8 +39,10 @@ header {
 
 
     @include breakpoint(sm) {
-      background-position: right -7.5rem top 6.25rem;
-      background-size: 90%;
+      --bg-position-x: right -7.5rem;
+      --bg-position-y: top 6.5rem;
+      --bg-size: 90%;
+
       border-radius: var(--radius);
       padding-top: 3.75rem;
 
@@ -56,23 +55,25 @@ header {
     }
 
     @include breakpoint(md) {
-      --image-padding: 10.75rem;
+      --bg-position-x: right;
+      --bg-position-y: top;
+      --bg-size: 55%;
+
       --hero-padding-y: 9.0625rem;
       --hero-padding-x: 6rem;
 
-      background-position: right top;
-      background-size: 55%;
       padding: var(--hero-padding-y) var(--hero-padding-x);
 
       &__article {
         justify-items: start;
 
-       p {
-         margin: 2.125rem 0 2.625rem;
-       }
+        p {
+          margin: 2.125rem 0 2.625rem;
+        }
       }
 
       &__image {
+        --image-padding: 10.75rem;
         top: calc(var(--hero-padding-y) - var(--image-padding));
         right: calc(var(--hero-padding-x) - var(--image-padding));
         transform: translateX(0%);

@@ -2,6 +2,10 @@
   --radius: 0.9375em; // border radius base size
 }
 
+// ++++++++++++++++++++++
+// ++ CONTAINER STYLES ++
+// ++++++++++++++++++++++
+
 .container-outer {
   max-width: 90rem;
   display: grid; //avoids margin collapsing
@@ -10,7 +14,7 @@
   overflow: hidden;
 
   &__img {
-    display: none;
+    display: none; //hide image on smaller screen sizes
   }
 
   @include breakpoint(lg) {

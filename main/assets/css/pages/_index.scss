@@ -8,12 +8,7 @@
 // ++++++++++++++++++++
 
 header {
-  margin-top: var(--nav-height); //move content down for fixed menu
-  color: var(--color-white);
 
-  .container {
-    background: var(--color-primary); //so it appears the hero fills 100% of width
-  }
 
   .hero {
     background-position: left top 6.5rem;

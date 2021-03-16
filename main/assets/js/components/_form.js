@@ -11,12 +11,17 @@ const errorHTML = `<div class="form-field-error">
                   </div>`;
 
 //validate each field when that field loses focus
-form.addEventListener('focusout', (e) => validateInput(e.target.parentNode) )
+if (form) {
+  form.addEventListener('focusout', (e) => validateInput(e.target.parentNode) )
 
-submitButton.addEventListener('click', (event) => {
-  event.preventDefault();
-  validateForm(inputGroups);
-})
+  submitButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    validateForm(inputGroups);
+  })
+}
+
+
+
 
 const validateForm = (inputGroups) => {
   //loop through all form-control-groups

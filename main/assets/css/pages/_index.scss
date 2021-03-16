@@ -39,17 +39,16 @@ header {
       width: 39rem; //set the image width since it is the same size on all screens
       z-index: -1;
     }
-  }
 
-  @include breakpoint(sm) {
-    .hero {
+
+    @include breakpoint(sm) {
       background-position: right -7.5rem top 6.25rem;
       background-size: 90%;
       border-radius: var(--radius);
       padding-top: 3.75rem;
 
       &__article {
-         --text-vspace-multiplier: 1.8; //controls the vertical rhythm
+          --text-vspace-multiplier: 1.8; //controls the vertical rhythm
 
         p {
           max-width: 46ch;
@@ -57,10 +56,7 @@ header {
       }
     }
 
-  }
-
-  @include breakpoint(md) {
-    .hero {
+    @include breakpoint(md) {
       --image-padding: 10.75rem;
       --hero-padding-y: 9.0625rem;
       --hero-padding-x: 6rem;
@@ -79,9 +75,7 @@ header {
         transform: translateX(0%);
       }
     }
-
   }
 }
-
 
 

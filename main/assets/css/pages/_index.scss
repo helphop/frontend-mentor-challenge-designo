@@ -20,7 +20,6 @@ header {
     &__article {
       display: grid;
       justify-items: center;
-      --text-vspace-multiplier: 2.5; //controls the vertical rhythm
 
       h1 {
         max-width: 20ch;
@@ -28,6 +27,7 @@ header {
 
       p {
         max-width: 35ch;
+        margin: 1.65rem 0;
       }
     }
 
@@ -48,10 +48,9 @@ header {
       padding-top: 3.75rem;
 
       &__article {
-          --text-vspace-multiplier: 1.8; //controls the vertical rhythm
-
         p {
           max-width: 46ch;
+           margin: 2rem 0 1.375rem;
         }
       }
     }
@@ -67,6 +66,10 @@ header {
 
       &__article {
         justify-items: start;
+
+       p {
+         margin: 2.125rem 0 2.625rem;
+       }
       }
 
       &__image {

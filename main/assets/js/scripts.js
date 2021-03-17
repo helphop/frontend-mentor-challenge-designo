@@ -321,20 +321,13 @@ Math.easeOutElastic = function (t, b, c, d) {
 function resetFocusTabsStyle() {
   window.dispatchEvent(new CustomEvent('initFocusTabs'));
 };
-// get all of the input elements
-//check each one if it is null or empty
-//append the error html to that elements parent.
-
 const form  = document.getElementsByTagName('form')[0];
 const inputGroups = document.getElementsByClassName('form-control-group');
 const submitButton = document.querySelector(".hero__form .btn--subtle");
 
-
 if (form) {
-
   //validate each field when that field loses focus
   form.addEventListener('focusout', (e) => validateInput(e.target.parentNode) )
-
   //validate each field when the form is submitted
   submitButton.addEventListener('click', (event) => {
     event.preventDefault();

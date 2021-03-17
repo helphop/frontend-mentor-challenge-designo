@@ -23,6 +23,7 @@
   padding: 0 0 var(--form-control-padding-y) var(--form-control-padding-x);
   resize: none;
   transition: all 0.2s;
+  box-shadow: none; //remove the red box from the user agent
 
   &:hover {
     border-bottom: 2px solid var(--color-white);

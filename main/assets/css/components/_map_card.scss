@@ -1,15 +1,17 @@
+// +++++++++++++++
+// ++ MAP CARD  ++
+// +++++++++++++++
+
+
 .map-card {
   display: grid;
-  grid-template-rows: 20.375rem auto;
+  grid-template-rows: 20.375rem;
 
-  &__image {
+  &__map {
     overflow: hidden;
-    grid-row: 1;
 
-    img {
+    > * {
       height: 100%;
-      width: 100%;
-      object-fit: cover;
     }
   }
 
@@ -39,9 +41,7 @@
         grid-column: span 2;
       }
     }
-
   }
-
 
   @include breakpoint(lg) {
     grid-auto-flow: column;
@@ -50,7 +50,11 @@
       width: 730px;
     }
 
-    &__image--right {
+    &__map {
+      width: 350px;
+    }
+
+    &__map--right {
       order: 1;
     }
 

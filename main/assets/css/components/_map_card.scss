@@ -21,6 +21,7 @@
     padding: 5.5rem 6rem;
     display: grid;
     row-gap: 24px;
+    text-align: center
   }
 
   @include breakpoint(sm) {
@@ -32,6 +33,7 @@
 
     &__intro {
       grid-template-columns: repeat(2, 1fr);
+      text-align: left;
 
       h1 {
         grid-column: span 2;

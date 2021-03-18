@@ -6,6 +6,10 @@
  --bg-image: url(../images/home/desktop/bg-pattern-hero-home.svg);
 }
 
+.border-radius {
+  border-radius: var(--radius);
+}
+
   .bg-primary {
     color: var(--color-white);
   }

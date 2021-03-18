@@ -4,7 +4,6 @@
 
 .wide-card {
   --bg-transform: none;
-  border-radius: var(--radius);
   padding: 4rem 1.5rem;
   display: grid;
   place-items: center;
@@ -20,7 +19,6 @@
   &.wide-card--flip-vertical {
     --bg-transform: rotateX(180deg);
   }
-
 
   &::before {
     position: absolute;
@@ -52,6 +50,7 @@
   }
 
   @include breakpoint(sm) {
+    border-radius: var(--radius);
     background-position: left center;
     padding: 3.625rem;
 

@@ -1,0 +1,12 @@
+.map-cards {
+  display: grid;
+  gap: 2.5rem;
+
+  @include breakpoint(sm) {
+    gap: 7.5rem;
+  }
+
+  @include breakpoint(md) {
+    gap: 2rem;
+  }
+}

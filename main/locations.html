@@ -1,14 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Designo Agency Website Challenge</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
+    <link id="codyframe" rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <title>Frontend Mentor | Designo Agency Website Challenge</title>
+  </head>
+  <body>
+    <div class="location | container-outer | margin-auto">
+      <section class="nav-bar fixed">
+        <div class="container">
+          <nav class="nav fixed" role="navigation" aria-label="Main">
+            <a href="index.html"><img class="nav__logo" src="./assets/images/shared/desktop/logo-dark.png"
+                alt="designo logo"></a>
+            <div class="nav__icon nav__icon--open" aria-label="Open menu" aria-hidden="true"
+              aria-controls="header-nav-list"><img src="./assets/images/shared/mobile/icon-hamburger.svg" alt="menu icon">
+            </div>
+            <div class="nav__icon nav__icon--close" aria-label="Close menu" aria-hidden="true"
+              aria-controls="header-nav-list"><img src="./assets/images/shared/mobile/icon-close.svg" alt="x icon"></div>
+            <ul class="nav__list | text-left" id="header-nav-list" aria-expanded="false">
+              <li><a href="about.html">Our Company</a></li>
+              <li><a href="locations.html">Locations</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <header class="header">
+        <div class="container container--width-100@mobile">
+          <div class="map-card">
+            <div class="map-card__image map-card__image--right">
+              <img sizes="(min-width: 1024px) 375px, (min-width: 768px) 689px, 375px"
+                srcset="assets/images/locations/desktop/image-map-canada.png 375w, assets/images/locations/tablet/image-map-canada.png 689w"
+                src="assets/images/locations/desktop/image-map-canada.png" alt="map of canada">
+            </div>
+
+            <div class="map-card__intro | bg-primary-lighter bg-circle">
+              <div class="text-component">
+                <h1 class="color-primary">Canada</h1>
+                <div class="map-card__details">
+                  <div class="text-component">
+                    <p class="text-bold">Designo Central Office</p>
+                    <p>3886 Wellington Street</p>
+                    <p>Toronto, Ontario M9C 3J5</p>
+                  </div>
+                  <div class="text-component">
+                    <p class="text-bold">Contact</p>
+                    <p>P : +1 253-863-8967</p>
+                    <p>M : contact@designo.co</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+  </div>
   Our Company
   Locations
   Contact
@@ -41,18 +94,18 @@
   M : contact@designo.uk
 
   Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can 
+  Ready to take it to the next level? Contact us today and find out how our expertise can
   help your business grow.
   Get in touch
-  
+
   Our company
   Locations
   Contact
-  
+
   Designo Central Office
   3886 Wellington Street
   Toronto, Ontario M9C 3J5
-  
+
   Contact Us (Central Office)
   P : +1 253-863-8967
   M : contact@designo.co

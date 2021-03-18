@@ -1,0 +1,59 @@
+.map-card {
+  display: grid;
+  grid-auto-rows: 20.375rem;
+
+  &__image {
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__intro {
+    --bg-image: url(../images/shared/desktop/bg-pattern-three-circles.svg);
+    --bg-position-x: left;
+    --bg-position-y: bottom;
+    --bg-size: 80%;
+    padding: 5.5rem 6rem;
+
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: 1.8fr 2fr;
+    .text-component {
+      --text-vspace-multiplier: 0.2;
+    }
+  }
+
+
+  @include breakpoint(sm) {
+    gap: 1.875rem;
+
+    > * {
+      border-radius: var(--radius);
+    }
+
+  }
+
+
+  @include breakpoint(lg) {
+    grid-auto-flow: column;
+
+    &__image {
+      width: 350px;
+    }
+
+    &__intro {
+    width: 730px;
+    }
+
+    &__image--right {
+      order: 1;
+    }
+
+  }
+}

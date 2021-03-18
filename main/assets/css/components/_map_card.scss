@@ -12,6 +12,7 @@
 
     > * {
       height: 100%;
+      z-index: 0; //so map does not sit above drop down menu
     }
   }
 

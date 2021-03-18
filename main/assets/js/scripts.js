@@ -422,6 +422,19 @@ if (document.querySelector(".location")) {
 
 	var markerRhydyfro  = L.marker(coordinatesRhydyfro).addTo(mapRhydyfro);
 
+
+
+	//Setup how the user interacts with the map
+	setMapControl(mapToronto);
+	setMapControl(mapNewSouthWales);
+	setMapControl(mapRhydyfro);
+
+	//disable scroll zoom until user clicks on map
+	function setMapControl(mapName){
+			mapName.scrollWheelZoom.disable();
+			mapName.on('focus', () => { mapName.scrollWheelZoom.enable(); });
+			mapName.on('blur', () => { mapName.scrollWheelZoom.disable(); });
+	}
 }
 const nav = document.querySelector(".nav-bar .nav")
 const openTrigger = nav.querySelector(".nav__icon--open")

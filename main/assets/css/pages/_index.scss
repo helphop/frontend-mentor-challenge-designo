@@ -14,9 +14,7 @@ header {
     position: relative;
     z-index: 0;
 
-    &__article {
-      display: grid;
-      justify-items: center;
+    &__text {
 
       h1 {
         max-width: 20ch;
@@ -45,7 +43,7 @@ header {
       border-radius: var(--radius);
       padding-top: 3.75rem;
 
-      &__article {
+      &__text {
         p {
           max-width: 46ch;
         }
@@ -60,11 +58,13 @@ header {
       --hero-padding-y: 9.0625rem;
       --hero-padding-x: 6rem;
 
-      padding: var(--hero-padding-y) var(--hero-padding-x);
-
-      &__article {
-        justify-items: start;
+      &__text {
+        --text-vspace-multiplier: 1.9;
+        margin-bottom: 2.5rem;
       }
+
+
+      padding: var(--hero-padding-y) var(--hero-padding-x);
 
       &__image {
         --image-padding: 10.75rem;

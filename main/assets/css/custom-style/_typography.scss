@@ -116,3 +116,11 @@ mark {
   --body-line-height: 1.58; // set body line-height
   --text-vspace-multiplier: 1.2; // increase vertical spacing
 }
+
+.responsive-text {
+  font-size: 0.9375rem;
+
+  @include breakpoint(sm) {
+    font-size: inherit;
+  }
+}

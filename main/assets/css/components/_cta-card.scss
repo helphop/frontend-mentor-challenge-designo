@@ -1,0 +1,40 @@
+.cta-card {
+  background-image: url(../images/shared/desktop/bg-pattern-call-to-action.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: var(--radius);
+  padding: 4rem 1.5rem;
+  display: grid;
+  row-gap: 2rem;
+  place-items: center;
+
+  .text-component {
+    text-align: center;
+    --text-vspace-multiplier: var(--vspace-lg);
+  }
+
+  &__title {
+    max-width: 15ch;
+    margin: 0 auto;
+  }
+
+  &__text {
+    max-width: 45ch;
+  }
+
+  @include breakpoint(sm) {
+    background-position: left center;
+    padding: 3.625rem;
+  }
+
+  @include breakpoint(md) {
+    background-position: right center;
+    padding: 4.5rem 6rem;
+    grid-auto-flow: column;
+    justify-content: space-between;
+
+    .text-component {
+      text-align: left;
+    }
+  }
+}

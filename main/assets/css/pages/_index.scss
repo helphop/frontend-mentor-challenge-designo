@@ -15,7 +15,8 @@ header {
     z-index: 0;
 
     &__text {
-
+      display: grid;
+      justify-items: center;
       h1 {
         max-width: 20ch;
       }
@@ -42,8 +43,11 @@ header {
 
       border-radius: var(--radius);
       padding-top: 3.75rem;
+      text-align: center;
 
       &__text {
+        --text-vspace-multiplier: 1.9;
+        margin-bottom: 1.2rem;
         p {
           max-width: 46ch;
         }
@@ -59,7 +63,6 @@ header {
       --hero-padding-x: 6rem;
 
       &__text {
-        --text-vspace-multiplier: 1.9;
         margin-bottom: 2.5rem;
       }
 

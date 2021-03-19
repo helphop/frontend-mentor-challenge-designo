@@ -74,50 +74,12 @@ main {
 // ++ DESIGN PAGE STYLES ++
 // ++++++++++++++++++++++++
 
-.design {
+.web-design,
+.graphic-design,
+.app-design {
 
   .container-outer__img {
       --img-1-top: 8%;
-  }
-
-  // +++++++++++++++++
-  // ++ WIDE CARDS  ++
-  // +++++++++++++++++
-
-  .header {
-
-    .wide-card {
-      background-position: left 40px bottom 10px;
-      padding: 6.5625rem 1.5rem;
-
-      p {
-        max-width: 40ch;
-      }
-
-      @include breakpoint(sm) {
-        padding: 4rem;
-        background-position: left  center;
-      }
-
-      @include breakpoint(md) {
-        grid-template-columns: 1fr;
-       background-position: left 40px bottom 10px;
-      }
-    }
-  }
-
-  // +++++++++++++++++++++++
-  // ++ EXAMPLE CARDS  ++
-  // +++++++++++++++++++++++
-
-  .examples__cards {
-    display: grid;
-    gap: var(--space-xxl);
-
-    @include breakpoint(md) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.875rem;
-    }
   }
 
 }

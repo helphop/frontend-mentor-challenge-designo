@@ -4,21 +4,21 @@ if (document.querySelector(".location")) {
 	const coordinatesToronto = [43.64478, -79.39458];
 	const mapToronto = L.map('mapToronto').setView(coordinatesToronto, 15);
 	createMapTile(mapToronto);
-	var markerToronto = L.marker(coordinatesToronto).addTo(mapToronto);
+	const markerToronto = L.marker(coordinatesToronto).addTo(mapToronto);
 
 
 	//New South Wales Map
 	const coordinatesNewSouthWales = [-30.330119821488733, 149.78873043547893]
 	const mapNewSouthWales = L.map('mapNewSouthWales').setView(coordinatesNewSouthWales, 15);
 	createMapTile(mapNewSouthWales);
-	var markerNewSouthWales = L.marker(coordinatesNewSouthWales).addTo(mapNewSouthWales);
+	const markerNewSouthWales = L.marker(coordinatesNewSouthWales).addTo(mapNewSouthWales);
 
 
 	//Rhyd-y-fro Map
 	coordinatesRhydyfro = [51.73220196706227, -3.8620045106800496]
 	const mapRhydyfro = L.map('mapRhydyfro').setView(coordinatesRhydyfro, 15);
 	createMapTile(mapRhydyfro);
-	var markerRhydyfro  = L.marker(coordinatesRhydyfro).addTo(mapRhydyfro);
+	const markerRhydyfro  = L.marker(coordinatesRhydyfro).addTo(mapRhydyfro);
 
 
 	//Setup how the user interacts with the map

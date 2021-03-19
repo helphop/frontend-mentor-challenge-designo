@@ -1,0 +1,14 @@
+// ++++++++++++++++++++++
+// ++ WEB DESIGN PAGE  ++
+// ++++++++++++++++++++++
+
+.web-design {
+  .design-card {
+
+    @include breakpoint(md) {
+      background-image: url(../images/web-design/desktop/bg-pattern-intro-web.svg);
+      background-position: right center;
+    }
+
+  }
+}

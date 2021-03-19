@@ -1,0 +1,27 @@
+.design-card {
+  background-image: url(../images/web-design/desktop/bg-pattern-intro-web.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom 1.875rem;
+  padding: 6.5625rem 1.5rem;
+  display: grid;
+  row-gap: 1.75rem;
+  place-items: center;
+
+  p {
+    font-size: 0.9375rem;
+    text-align: center;
+  }
+
+
+  @include breakpoint(sm) {
+    background-position: right -10rem center;
+    border-radius: var(--radius);
+    padding: 4rem 1.5rem;
+
+    p {
+      max-width: 40ch;
+      font-size: var(--text-base-size, 1rem);
+    }
+  }
+
+}

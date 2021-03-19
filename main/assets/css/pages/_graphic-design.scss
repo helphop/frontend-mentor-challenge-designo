@@ -1,0 +1,14 @@
+// ++++++++++++++++++++++++++
+// ++ GRAPHIC DESIGN PAGE  ++
+// ++++++++++++++++++++++++++
+
+.graphic-design {
+  .design-card {
+
+    @include breakpoint(md) {
+      background-image: url(../images/graphic-design/desktop/bg-pattern-intro-graphic.svg);
+      background-position: left center;
+    }
+
+  }
+}

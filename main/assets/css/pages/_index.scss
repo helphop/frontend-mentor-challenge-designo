@@ -12,11 +12,15 @@ header {
     overflow: hidden;
     padding: 5rem 0 27rem;
     position: relative;
+    text-align: center;
     z-index: 0;
 
     &__text {
+      --text-vspace-multiplier: var(--vspace-xxl); //controls the spacing between text
+      margin-bottom: 1.5rem;
       display: grid;
       justify-items: center;
+
       h1 {
         max-width: 20ch;
       }
@@ -43,11 +47,11 @@ header {
 
       border-radius: var(--radius);
       padding-top: 3.75rem;
-      text-align: center;
 
       &__text {
-        --text-vspace-multiplier: 1.9;
+        --text-vspace-multiplier: var(--vspace-xl);
         margin-bottom: 1.2rem;
+
         p {
           max-width: 46ch;
         }
@@ -62,12 +66,13 @@ header {
       --hero-padding-y: 9.0625rem;
       --hero-padding-x: 6rem;
 
+      text-align: left;
+      padding: var(--hero-padding-y) var(--hero-padding-x);
+
       &__text {
+        justify-items: start;
         margin-bottom: 2.5rem;
       }
-
-
-      padding: var(--hero-padding-y) var(--hero-padding-x);
 
       &__image {
         --image-padding: 10.75rem;

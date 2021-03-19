@@ -100,10 +100,19 @@ mark {
     font-size: var(--text-sm);
     color: var(--color-contrast-medium);
   }
+
+//control the vertical spacing of text-components
+  --vspace-xxs: 0.2;
+  --vspace-xs: 0.4;
+  --vspace-sm: 0.8;
+  --vspace-md: 1;
+  --vspace-lg: 1.4;
+  --vspace-xl: 1.8;
+  --vspace-xxl: 2.8 ;
+  --vspace-xxxl: 3.2;
 }
 
 .article { // e.g., blog posts
   --body-line-height: 1.58; // set body line-height
   --text-vspace-multiplier: 1.2; // increase vertical spacing
 }
-

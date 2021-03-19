@@ -38,13 +38,6 @@
     font-size: var(--text-sm, 0.833em);
   }
 
-  .text-responsive {
-    font-size: 0.9375rem;
-    @include breakpoint(sm) {
-      font-size: var(--text-base-size, 1em);
-    }
-
-  }
   // --------------------------------
 
   // Inline Text

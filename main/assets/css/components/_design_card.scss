@@ -7,6 +7,11 @@
   row-gap: 1.75rem;
   place-items: center;
 
+  p {
+    font-size: 0.9375rem;
+    text-align: center;
+  }
+
 
   @include breakpoint(sm) {
     background-position: right -10rem center;
@@ -15,11 +20,8 @@
 
     p {
       max-width: 40ch;
+      font-size: var(--text-base-size, 1rem);
     }
-  }
-
-  @include breakpoint(md) {
-    background-position: right center;
   }
 
 }

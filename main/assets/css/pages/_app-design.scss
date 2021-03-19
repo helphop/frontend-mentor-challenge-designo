@@ -1,0 +1,14 @@
+// ++++++++++++++++++++++
+// ++ APP DESIGN PAGE  ++
+// ++++++++++++++++++++++
+
+.app-design {
+  .design-card {
+
+    @include breakpoint(md) {
+      background-image: url(../images/app-design/desktop/bg-pattern-intro-app.svg);
+      background-position: left center;
+    }
+
+  }
+}

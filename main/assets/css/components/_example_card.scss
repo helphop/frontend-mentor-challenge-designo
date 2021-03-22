@@ -43,8 +43,11 @@
       display: grid;
       place-items: center;
       align-content: center;
-      gap: 1rem;
       transition: all 0.4s;
+
+      .text-component {
+        --text-vspace-multiplier: 3.7;
+      }
     }
 
     &__link:hover,
@@ -56,8 +59,12 @@
 
   @include breakpoint(sm) {
     grid-template-columns: repeat(2, 1fr);
+    &__link {
+      .text-component {
+        --text-vspace-multiplier: 2.6;
+      }
+    }
   }
-
   @include breakpoint(md) {
     grid-template-columns: 1fr;
   }

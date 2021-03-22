@@ -9349,74 +9349,6 @@ html:not(.js) .no-js\:is-hidden {
 }
 
 :root {
-  --radius: 0.9375em;
-}
-
-.container-outer {
-  max-width: 90rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  position: relative;
-  overflow: hidden;
-}
-
-.container-outer__img {
-  display: none;
-}
-
-@media (min-width: 80rem) {
-  .container-outer__img {
-    display: block;
-    position: absolute;
-    z-index: -1;
-  }
-  .container-outer__img--1 {
-    left: var(--img-1-left, 0);
-    top: var(--img-1-top, 15%);
-  }
-  .container-outer__img--2 {
-    right: var(--img-2-right, 0);
-    bottom: var(--img-2-bottom, 17.5%);
-  }
-}
-
-.container {
-  max-width: 1111px;
-}
-
-.container--width-100\@mobile {
-  width: 100%;
-}
-
-@media (min-width: 48rem) {
-  .container--width-100\@mobile {
-    width: var(--container-width);
-  }
-}
-
-.header {
-  margin-top: var(--nav-height);
-}
-
-@media (min-width: 48rem) {
-  .header {
-    margin-top: initial;
-  }
-}
-
-main {
-  display: grid;
-  margin-top: var(--space-xxxl);
-  gap: var(--space-xxxl);
-}
-
-.web-design .container-outer__img,
-.graphic-design .container-outer__img,
-.app-design .container-outer__img {
-  --img-1-top: 8%;
-}
-
-:root {
   --font-primary: 'Jost', sans-serif;
   --text-base-size: 1em;
   --text-scale-ratio: 1.2;
@@ -9644,6 +9576,68 @@ mark {
   background-size: var(--bg-size, 100%);
 }
 
+:root {
+  --radius: 0.9375em;
+}
+
+.container-outer {
+  max-width: 90rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-outer__img {
+  display: none;
+}
+
+@media (min-width: 80rem) {
+  .container-outer__img {
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+  .container-outer__img--1 {
+    left: var(--img-1-left, 0);
+    top: var(--img-1-top, 15%);
+  }
+  .container-outer__img--2 {
+    right: var(--img-2-right, 0);
+    bottom: var(--img-2-bottom, 17.5%);
+  }
+}
+
+.container {
+  max-width: 1111px;
+}
+
+.container--width-100\@mobile {
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .container--width-100\@mobile {
+    width: var(--container-width);
+  }
+}
+
+.header {
+  margin-top: var(--nav-height);
+}
+
+@media (min-width: 48rem) {
+  .header {
+    margin-top: initial;
+  }
+}
+
+main {
+  display: grid;
+  margin-top: var(--space-xxxl);
+  gap: var(--space-xxxl);
+}
+
 .cta-card {
   background-image: url(../images/shared/desktop/bg-pattern-call-to-action.svg);
   background-repeat: no-repeat;
@@ -9747,8 +9741,11 @@ mark {
   display: grid;
   place-items: center;
   align-content: center;
-  gap: 1rem;
   transition: all 0.4s;
+}
+
+.example-card .card__link .text-component {
+  --text-vspace-multiplier: 3.7;
 }
 
 .example-card .card__link:hover, .example-card .card__link:active {
@@ -9759,6 +9756,9 @@ mark {
 @media (min-width: 48rem) {
   .example-card {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .example-card__link .text-component {
+    --text-vspace-multiplier: 2.6;
   }
 }
 
@@ -10331,13 +10331,6 @@ mark {
   }
 }
 
-@media (min-width: 64rem) {
-  .app-design .design-card {
-    background-image: url(../images/app-design/desktop/bg-pattern-intro-app.svg);
-    background-position: left center;
-  }
-}
-
 .contact .container-outer__img {
   --img-2-bottom: 10%;
 }
@@ -10396,6 +10389,26 @@ mark {
   }
   .contact .hero__article p {
     max-width: 47ch;
+  }
+}
+
+.web-design .container-outer__img,
+.graphic-design .container-outer__img,
+.app-design .container-outer__img {
+  --img-1-top: 8%;
+}
+
+@media (min-width: 64rem) {
+  .web-design .design-card {
+    background-image: url(../images/web-design/desktop/bg-pattern-intro-web.svg);
+    background-position: right center;
+  }
+}
+
+@media (min-width: 64rem) {
+  .app-design .design-card {
+    background-image: url(../images/app-design/desktop/bg-pattern-intro-app.svg);
+    background-position: left center;
   }
 }
 
@@ -10496,13 +10509,6 @@ header .hero__image {
 @media (min-width: 64rem) {
   .map-cards {
     gap: 2rem;
-  }
-}
-
-@media (min-width: 64rem) {
-  .web-design .design-card {
-    background-image: url(../images/web-design/desktop/bg-pattern-intro-web.svg);
-    background-position: right center;
   }
 }
 

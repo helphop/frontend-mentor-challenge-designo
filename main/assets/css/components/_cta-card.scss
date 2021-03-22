@@ -10,9 +10,9 @@
 
   .text-component {
     text-align: center;
-    --text-vspace-multiplier: var(--vspace-lg);
     display: grid;
     justify-items: center;
+     --text-vspace-multiplier: var(--vspace-lg); //controls vertical spacing of text
   }
 
   &__title {

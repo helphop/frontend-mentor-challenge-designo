@@ -9651,9 +9651,9 @@ main {
 
 .cta-card .text-component {
   text-align: center;
-  --text-vspace-multiplier: var(--vspace-lg);
   display: grid;
   justify-items: center;
+  --text-vspace-multiplier: var(--vspace-lg);
 }
 
 .cta-card__title {

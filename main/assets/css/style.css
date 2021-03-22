@@ -4065,6 +4065,7 @@ html:not(.js) .no-js\:is-hidden {
 
 .bg-primary {
   background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), var(--bg-o, 1));
+  color: var(--color-white);
 }
 
 .bg-primary-light {
@@ -9632,14 +9633,6 @@ mark {
   --bg-repeat: no-repeat;
   --bg-size: 100%;
   --bg-image: url(../images/home/desktop/bg-pattern-hero-home.svg);
-}
-
-.border-radius {
-  border-radius: var(--radius);
-}
-
-.bg-primary {
-  color: var(--color-white);
 }
 
 .bg-black-light {

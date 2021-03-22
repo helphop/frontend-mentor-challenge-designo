@@ -6,26 +6,18 @@
  --bg-image: url(../images/home/desktop/bg-pattern-hero-home.svg);
 }
 
-.border-radius {
-  border-radius: var(--radius);
+.bg-black-light {
+  color: var(--color-white);
+  background-color: alpha(var(--color-black-light), var(--bg-o, 1));
 }
 
-  .bg-primary {
-    color: var(--color-white);
-  }
+.rotate-180 {
+  transform: rotate(180deg);
+}
 
-  .bg-black-light {
-    color: var(--color-white);
-    background-color: alpha(var(--color-black-light), var(--bg-o, 1));
-  }
-
-  .rotate-180 {
-    transform: rotate(180deg);
-  }
-
-  .bg-circle {
-    background-image:  var(--bg-image);
-    background-repeat: var(--bg-repeat);
-    background-position: var(--bg-position-x) var(--bg-position-y);
-    background-size: var(--bg-size);
-  }
+.bg-circle {
+  background-image:  var(--bg-image);
+  background-repeat: var(--bg-repeat);
+  background-position: var(--bg-position-x) var(--bg-position-y);
+  background-size: var(--bg-size);
+}

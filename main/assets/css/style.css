@@ -9689,6 +9689,9 @@ main {
   background-repeat: no-repeat;
   background-position: right bottom 1.875rem;
   padding: 6.5625rem 1.5rem;
+}
+
+.design-card .text-component {
   display: grid;
   place-items: center;
   --text-vspace-multiplier: 3;
@@ -9704,6 +9707,8 @@ main {
     background-position: right -10rem center;
     border-radius: var(--radius);
     padding: 4rem 1.5rem;
+  }
+  .design-card .text-component {
     --text-vspace-multiplier: 1.5;
   }
 }

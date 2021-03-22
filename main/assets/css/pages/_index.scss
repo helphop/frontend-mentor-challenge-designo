@@ -40,7 +40,6 @@ header {
       z-index: -1;
     }
 
-
     @include breakpoint(sm) {
       --bg-position-x: right -7.5rem;
       --bg-position-y: top 6.5rem;
@@ -84,5 +83,3 @@ header {
     }
   }
 }
-
-

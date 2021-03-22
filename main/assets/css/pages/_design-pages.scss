@@ -1,0 +1,58 @@
+// ++++++++++++++++++++++++
+// ++ DESIGN PAGE STYLES ++
+// ++++++++++++++++++++++++
+
+.web-design,
+.graphic-design,
+.app-design {
+
+  .container-outer__img {
+      --img-1-top: 8%;
+  }
+
+}
+
+// ++++++++++++++++++++++
+// ++ WEB DESIGN PAGE  ++
+// ++++++++++++++++++++++
+
+.web-design {
+  .design-card {
+
+    @include breakpoint(md) {
+      background-image: url(../images/web-design/desktop/bg-pattern-intro-web.svg);
+      background-position: right center;
+    }
+
+  }
+}
+
+// ++++++++++++++++++++++
+// ++ APP DESIGN PAGE  ++
+// ++++++++++++++++++++++
+
+.app-design {
+  .design-card {
+
+    @include breakpoint(md) {
+      background-image: url(../images/app-design/desktop/bg-pattern-intro-app.svg);
+      background-position: left center;
+    }
+
+  }
+}
+
+// ++++++++++++++++++++++++++
+// ++ GRAPHIC DESIGN PAGE  ++
+// ++++++++++++++++++++++++++
+
+.graphic-design {
+  .design-card {
+
+    @include breakpoint(md) {
+      background-image: url(../images/graphic-design/desktop/bg-pattern-intro-graphic.svg);
+      background-position: left center;
+    }
+
+  }
+}

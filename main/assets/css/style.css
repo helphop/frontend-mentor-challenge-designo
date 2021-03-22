@@ -9659,22 +9659,6 @@ mark {
   background-size: var(--bg-size);
 }
 
-.flow-content > * + * {
-  margin-top: 1.65rem;
-}
-
-@media (min-width: 48rem) {
-  .flow-content > * + * {
-    margin-top: 2rem;
-  }
-}
-
-@media (min-width: 64rem) {
-  .flow-content > * + * {
-    margin-top: 2.125rem;
-  }
-}
-
 .cta-card {
   background-image: url(../images/shared/desktop/bg-pattern-call-to-action.svg);
   background-repeat: no-repeat;
@@ -10265,6 +10249,7 @@ mark {
   padding: 80px 24px;
   display: grid;
   place-content: center;
+  --text-vspace-multiplier: 2.8;
 }
 
 .photo-card__photo img {
@@ -10280,6 +10265,7 @@ mark {
   }
   .photo-card__content {
     padding: 4.25rem 3.625rem;
+    --text-vspace-multiplier: 2;
   }
 }
 

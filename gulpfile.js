@@ -106,7 +106,12 @@ gulp.task('dist', async function(){
   await moveCSS();
   // copy any additional js files to the dist folder
   await moveJS();
+  // copy all the leafletJS files into  main/assets/js/leaflet folder
+  await moveLeafletJS();
   // copy all the assets inside main/assets/img folder to the dist folder
+  await moveLeafletCSS();
+  // copy all the assets inside main/assets/img folder to the dist folder
+  await moveLeafletImages();
   await moveAssets();
   // copy all html files inside main folder to the dist folder
   await moveContent();
@@ -132,7 +137,7 @@ function purgeCSS() {
 function minifyJs() {
   return new Promise(function(resolve, reject) {
     var stream = gulp.src(scriptsJsPath+'/scripts.js')
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(distFolder+'/assets/js'));
 
     stream.on('finish', function() {
@@ -140,6 +145,39 @@ function minifyJs() {
     });
   });
 };
+
+function moveLeafletJS() {
+    return new Promise(function(resolve, reject) {
+    var stream = gulp.src(scriptsJsPath+'/leaflet/leaflet.js')
+    .pipe(gulp.dest(distFolder+'/assets/js/leaflet'));
+
+    stream.on('finish', function() {
+      resolve();
+    });
+  });
+}
+
+function moveLeafletCSS() {
+    return new Promise(function(resolve, reject) {
+    var stream = gulp.src(cssFolder+'/leaflet/*.css', { allowEmpty: true })
+    .pipe(gulp.dest(assetsFolder+'/css/leaflet'));
+
+    stream.on('finish', function() {
+      resolve();
+    });
+  });
+}
+
+function moveLeafletImages() {
+    return new Promise(function(resolve, reject) {
+    var stream = gulp.src([cssFolder+'/leaflet/images/**'], { allowEmpty: true })
+    .pipe(gulp.dest(assetsFolder+'/css/leaflet/images'));
+
+    stream.on('finish', function() {
+      resolve();
+    });
+  });
+}
 
 function moveCSS() {
   return new Promise(function(resolve, reject) {
@@ -165,8 +203,8 @@ function moveJS() {
 
 function moveAssets() {
   return new Promise(function(resolve, reject) {
-    var stream = gulp.src(['main/assets/img/**'], { allowEmpty: true })
-    .pipe(gulp.dest(assetsFolder+'img'));
+    var stream = gulp.src(['main/assets/images/**'], { allowEmpty: true })
+    .pipe(gulp.dest(assetsFolder+'images'));
 
     stream.on('finish', function() {
       resolve();

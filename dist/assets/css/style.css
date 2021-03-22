@@ -308,6 +308,7 @@ s {
 
 .bg-primary {
   background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), var(--bg-o, 1));
+  color: var(--color-white);
 }
 
 .bg-primary-lighter {
@@ -493,74 +494,6 @@ s {
   :root, * {
     --component-padding: 0;
   }
-}
-
-:root {
-  --radius: 0.9375em;
-}
-
-.container-outer {
-  max-width: 90rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  position: relative;
-  overflow: hidden;
-}
-
-.container-outer__img {
-  display: none;
-}
-
-@media (min-width: 80rem) {
-  .container-outer__img {
-    display: block;
-    position: absolute;
-    z-index: -1;
-  }
-  .container-outer__img--1 {
-    left: var(--img-1-left, 0);
-    top: var(--img-1-top, 15%);
-  }
-  .container-outer__img--2 {
-    right: var(--img-2-right, 0);
-    bottom: var(--img-2-bottom, 17.5%);
-  }
-}
-
-.container {
-  max-width: 1111px;
-}
-
-.container--width-100\@mobile {
-  width: 100%;
-}
-
-@media (min-width: 48rem) {
-  .container--width-100\@mobile {
-    width: var(--container-width);
-  }
-}
-
-.header {
-  margin-top: var(--nav-height);
-}
-
-@media (min-width: 48rem) {
-  .header {
-    margin-top: initial;
-  }
-}
-
-main {
-  display: grid;
-  margin-top: var(--space-xxxl);
-  gap: var(--space-xxxl);
-}
-
-.web-design .container-outer__img,
-.graphic-design .container-outer__img,
-.app-design .container-outer__img {
-  --img-1-top: 8%;
 }
 
 :root {
@@ -774,22 +707,6 @@ mark {
   top: 0;
 }
 
-:root {
-  --bg-position-x: left;
-  --bg-position-y: center;
-  --bg-repeat: no-repeat;
-  --bg-size: 100%;
-  --bg-image: url(../images/home/desktop/bg-pattern-hero-home.svg);
-}
-
-.border-radius {
-  border-radius: var(--radius);
-}
-
-.bg-primary {
-  color: var(--color-white);
-}
-
 .bg-black-light {
   color: var(--color-white);
   background-color: hsla(var(--color-black-light-h), var(--color-black-light-s), var(--color-black-light-l), var(--bg-o, 1));
@@ -801,26 +718,72 @@ mark {
 }
 
 .bg-circle {
-  background-image: var(--bg-image);
-  background-repeat: var(--bg-repeat);
-  background-position: var(--bg-position-x) var(--bg-position-y);
-  background-size: var(--bg-size);
+  background-image: var(--bg-image, url(../images/home/desktop/bg-pattern-hero-home.svg));
+  background-repeat: var(--bg-repeat, no-repeat);
+  background-position: var(--bg-position-x, left) var(--bg-position-y, center);
+  background-size: var(--bg-size, 100%);
 }
 
-.flow-content > * + * {
-  margin-top: 1.65rem;
+:root {
+  --radius: 0.9375em;
+}
+
+.container-outer {
+  max-width: 90rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-outer__img {
+  display: none;
+}
+
+@media (min-width: 80rem) {
+  .container-outer__img {
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+  .container-outer__img--1 {
+    left: var(--img-1-left, 0);
+    top: var(--img-1-top, 15%);
+  }
+  .container-outer__img--2 {
+    right: var(--img-2-right, 0);
+    bottom: var(--img-2-bottom, 17.5%);
+  }
+}
+
+.container {
+  max-width: 1111px;
+}
+
+.container--width-100\@mobile {
+  width: 100%;
 }
 
 @media (min-width: 48rem) {
-  .flow-content > * + * {
-    margin-top: 2rem;
+  .container--width-100\@mobile {
+    width: var(--container-width);
   }
 }
 
-@media (min-width: 64rem) {
-  .flow-content > * + * {
-    margin-top: 2.125rem;
+.header {
+  margin-top: var(--nav-height);
+}
+
+@media (min-width: 48rem) {
+  .header {
+    margin-top: initial;
   }
+}
+
+main {
+  display: grid;
+  margin-top: var(--space-xxxl);
+  gap: var(--space-xxxl);
 }
 
 .cta-card {
@@ -836,12 +799,13 @@ mark {
 
 .cta-card .text-component {
   text-align: center;
+  display: grid;
+  justify-items: center;
   --text-vspace-multiplier: var(--vspace-lg);
 }
 
 .cta-card__title {
   max-width: 15ch;
-  margin: 0 auto;
 }
 
 .cta-card__text {
@@ -864,6 +828,7 @@ mark {
   }
   .cta-card .text-component {
     text-align: left;
+    justify-items: start;
   }
 }
 
@@ -872,9 +837,12 @@ mark {
   background-repeat: no-repeat;
   background-position: right bottom 1.875rem;
   padding: 6.5625rem 1.5rem;
+}
+
+.design-card .text-component {
   display: grid;
-  row-gap: 1.75rem;
   place-items: center;
+  --text-vspace-multiplier: 3;
 }
 
 .design-card p {
@@ -887,6 +855,9 @@ mark {
     background-position: right -10rem center;
     border-radius: var(--radius);
     padding: 4rem 1.5rem;
+  }
+  .design-card .text-component {
+    --text-vspace-multiplier: 1.5;
   }
 }
 
@@ -925,8 +896,11 @@ mark {
   display: grid;
   place-items: center;
   align-content: center;
-  gap: 1rem;
   transition: all 0.4s;
+}
+
+.example-card .card__link .text-component {
+  --text-vspace-multiplier: 3.7;
 }
 
 .example-card .card__link:hover, .example-card .card__link:active {
@@ -937,6 +911,9 @@ mark {
 @media (min-width: 48rem) {
   .example-card {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .example-card__link .text-component {
+    --text-vspace-multiplier: 2.6;
   }
 }
 
@@ -1413,6 +1390,7 @@ mark {
   padding: 80px 24px;
   display: grid;
   place-content: center;
+  --text-vspace-multiplier: 2.8;
 }
 
 .photo-card__photo img {
@@ -1428,6 +1406,7 @@ mark {
   }
   .photo-card__content {
     padding: 4.25rem 3.625rem;
+    --text-vspace-multiplier: 2;
   }
 }
 
@@ -1507,13 +1486,6 @@ mark {
   }
 }
 
-@media (min-width: 64rem) {
-  .app-design .design-card {
-    background-image: url(../images/app-design/desktop/bg-pattern-intro-app.svg);
-    background-position: left center;
-  }
-}
-
 .contact .container-outer__img {
   --img-2-bottom: 10%;
 }
@@ -1572,6 +1544,26 @@ mark {
   }
   .contact .hero__article p {
     max-width: 47ch;
+  }
+}
+
+.web-design .container-outer__img,
+.graphic-design .container-outer__img,
+.app-design .container-outer__img {
+  --img-1-top: 8%;
+}
+
+@media (min-width: 64rem) {
+  .web-design .design-card {
+    background-image: url(../images/web-design/desktop/bg-pattern-intro-web.svg);
+    background-position: right center;
+  }
+}
+
+@media (min-width: 64rem) {
+  .app-design .design-card {
+    background-image: url(../images/app-design/desktop/bg-pattern-intro-app.svg);
+    background-position: left center;
   }
 }
 
@@ -1672,12 +1664,5 @@ header .hero__image {
 @media (min-width: 64rem) {
   .map-cards {
     gap: 2rem;
-  }
-}
-
-@media (min-width: 64rem) {
-  .web-design .design-card {
-    background-image: url(../images/web-design/desktop/bg-pattern-intro-web.svg);
-    background-position: right center;
   }
 }

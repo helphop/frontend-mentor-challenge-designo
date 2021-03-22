@@ -11,11 +11,12 @@
   .text-component {
     text-align: center;
     --text-vspace-multiplier: var(--vspace-lg);
+    display: grid;
+    justify-items: center;
   }
 
   &__title {
     max-width: 15ch;
-    margin: 0 auto;
   }
 
   &__text {
@@ -35,6 +36,7 @@
 
     .text-component {
       text-align: left;
+      justify-items: start;
     }
   }
 }

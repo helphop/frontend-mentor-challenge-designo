@@ -9627,14 +9627,6 @@ mark {
   top: 0;
 }
 
-:root {
-  --bg-position-x: left;
-  --bg-position-y: center;
-  --bg-repeat: no-repeat;
-  --bg-size: 100%;
-  --bg-image: url(../images/home/desktop/bg-pattern-hero-home.svg);
-}
-
 .bg-black-light {
   color: var(--color-white);
   background-color: hsla(var(--color-black-light-h), var(--color-black-light-s), var(--color-black-light-l), var(--bg-o, 1));
@@ -9646,10 +9638,10 @@ mark {
 }
 
 .bg-circle {
-  background-image: var(--bg-image);
-  background-repeat: var(--bg-repeat);
-  background-position: var(--bg-position-x) var(--bg-position-y);
-  background-size: var(--bg-size);
+  background-image: var(--bg-image, url(../images/home/desktop/bg-pattern-hero-home.svg));
+  background-repeat: var(--bg-repeat, no-repeat);
+  background-position: var(--bg-position-x, left) var(--bg-position-y, center);
+  background-size: var(--bg-size, 100%);
 }
 
 .cta-card {

@@ -9694,8 +9694,8 @@ mark {
   background-position: right bottom 1.875rem;
   padding: 6.5625rem 1.5rem;
   display: grid;
-  row-gap: 1.75rem;
   place-items: center;
+  --text-vspace-multiplier: 3;
 }
 
 .design-card p {
@@ -9708,6 +9708,7 @@ mark {
     background-position: right -10rem center;
     border-radius: var(--radius);
     padding: 4rem 1.5rem;
+    --text-vspace-multiplier: 1.5;
   }
 }
 

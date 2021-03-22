@@ -9638,6 +9638,10 @@ main {
   gap: var(--space-xxxl);
 }
 
+.cta {
+  z-index: 1;
+}
+
 .cta-card {
   background-image: url(../images/shared/desktop/bg-pattern-call-to-action.svg);
   background-repeat: no-repeat;
@@ -9783,7 +9787,7 @@ main {
   --element-spacing: var(--space-xl);
   padding: var(--top-padding) 0 var(--bottom-padding);
   margin-top: calc(var(--bottom-padding) - var(--top-padding));
-  z-index: -1;
+  z-index: 0;
 }
 
 .footer .nav__logo__container {

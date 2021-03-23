@@ -315,11 +315,6 @@ h3 {
   font-size: var(--text-md, 1.44em);
 }
 
-a, .link {
-  color: var(--color-primary, #2a6df4);
-  text-decoration: underline;
-}
-
 s {
   text-decoration: line-through;
 }
@@ -735,6 +730,12 @@ s {
   background-size: var(--bg-size, 100%);
 }
 
+/*
+  +++++++++++++++++++
+  ++ LAYOUT STYLES ++
+  +++++++++++++++++++
+  */
+
 :root {
   --radius: 0.9375em;
 }
@@ -794,8 +795,24 @@ s {
 main {
   display: grid;
   margin-top: var(--space-xxxl);
-  gap: var(--space-xxxl);
+   gap: var(--space-xxxl);
 }
+
+
+/*
+  +++++++++++++++++++++++
+  ++ COMPONENTS STYLES ++
+  +++++++++++++++++++++++
+  */
+
+
+
+
+/*
+  +++++++++++++++++++++++++
+  ++ CALL TO ACTION CARD ++
+  +++++++++++++++++++++++++
+  */
 
 .cta {
   z-index: 1;
@@ -846,6 +863,12 @@ main {
     justify-items: start;
   }
 }
+
+/*
+  +++++++++++++++++
+  ++ DESIGN CARD ++
+  +++++++++++++++++
+  */
 
 .design-card {
   background-image: url(../images/web-design/desktop/bg-pattern-intro-web.svg);

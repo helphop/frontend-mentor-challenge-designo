@@ -10024,6 +10024,7 @@ main {
   text-align: center;
   text-transform: uppercase;
   position: relative;
+  text-decoration: none;
 }
 
 .image-card::before {

@@ -1501,6 +1501,9 @@ main {
     grid-template-columns: repeat(3, 1fr);
     justify-items: start;
   }
+  .footer .contact__phone p {
+    font-weight: bold;
+  }
   .footer .contact__social {
     place-self: end;
   }

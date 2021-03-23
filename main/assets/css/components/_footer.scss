@@ -59,6 +59,12 @@
       grid-template-columns: repeat(3, 1fr);
       justify-items: start;
 
+      &__phone {
+        p {
+          font-weight: bold;
+        }
+      }
+
       &__social {
         place-self: end;
       }

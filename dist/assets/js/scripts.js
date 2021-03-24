@@ -79,15 +79,14 @@ if (document.querySelector(".location")) {
 
 	//creates the map for the given map object
 	function createMapTile(mapName) {
-			L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 			maxZoom: 18,
-			id: 'mapbox/streets-v11',
 			tileSize: 512,
 			zoomOffset: -1,
-			accessToken: 'pk.eyJ1IjoiY2hlbGxnb3VkYSIsImEiOiJja21mMTY4bTgwNGRuMnZrMXNwY28xZ2Z3In0.1uuZ2XwLqDfH0YvDat9Wqw'
 		}).addTo(mapName);
 	}
+
 
 	//disable scroll zoom until user clicks on map
 	function setMapControl(mapName){
